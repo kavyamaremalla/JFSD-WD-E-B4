@@ -79,4 +79,9 @@ Object Creation :
 A method inside a method -> compilation error
 
 
-git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git
+git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git --> for the first time
+git pull -> daily, you will get updates.
+
+Task :
+
+Create a class `Student` with a non-static variable `studentId` and a static variable `universityName`. Write methods to display `studentId` and `universityName`, and a static method to update `universityName`. In the `main` method of `HelloWorld`, create two `Student` objects, assign different `studentId` values, display their details, update `universityName` using the static method, and display the details again. Observe how the change in `universityName` affects both objects.
