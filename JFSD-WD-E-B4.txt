@@ -1,0 +1,82 @@
+What is Java Full Stack 
+	Front End -> user sees
+	Back End -> which runs 24 * 7 -> processing of data, connects to database(SQL, No SQL)
+	API -> bridge 
+
+
+Why Java -> Platform independent, 
+			develop web, desktop, mobile
+			OOPS -> Object Oriented Programming Language
+
+JVM, JDK, JRE -> Name.java
+
+	Java Virtual Machine -> load, verify, execute code and provides run time env
+
+	Java Runtime Environment  -> implementation of JVM -> libraries + files --> Sun Microsystems
+
+	Java Development Kit -> javac, java etc + JRE + some supporting jars
+
+Java Enhancement Proposal -> JEP
+			java 6 -> 2006 , java 7 : 2011., java 8 : 2014, java 9 : 2017
+			LTS : Long Term Support Versions -> 8, 11, 17, 21 (current lts version)
+			every six months in march and september -> minor versions, non-lts versions
+
+			Back ward compatability..
+
+	Install JDK :
+
+		Edit environment variables(installed JDK) and edit path (bin)
+		cmd -> check java -version		
+
+Install IDE : Integrated Development environment 
+		Eclipse, NetBeans, STS, IntelliJ (community - free source, ultimate - paid version)
+
+Configure a folder in IntelliJ
+	-> New Project -> created a project with IntelliJ System, add/select JDK
+	-> packages -> group of classes
+	-> .java extension
+	-> Class : Blue print -> objects, methods/functions, refer to another class, variables
+		Objects : attributes -> weight, color -> characterstics
+				  methods -> actions your perform : drive, applyBrake, soundHorn
+				  constructors -> creating and initializing objects
+
+Naming Conventions :
+	camelcase : 
+		Class Names : UniversityServiceImplementation .. connEctioexception
+		method/function, Object Names : applyBrake
+
+	Compilation Error : When you code, you will see errors	
+		through cmd : javac HelloWorld.java
+
+	Run Time Errors : When you execute code, you will see errors
+		run through cmd : java HelloWorld.java
+
+
+	Main : public static void main(String[] args){
+			public -> access modifier
+			static -> key word
+			void -> return type
+			main -> name of the Method
+			String[] args -> input parameters/method signature.. Array of String arguments
+	}
+
+	From static methods you can't refer non-static variables or methods directly
+		Create an object for class, from object you can refer non-static attributes in static methods
+
+
+	Comments :
+		    /* comment
+   			 * something */
+
+			//    comment	
+
+Object Creation :
+
+	NameOfClass objName = new NameOfClass();
+	create any number of objects for a class
+	name of object in a method should be unique
+
+A method inside a method -> compilation error
+
+
+git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git
