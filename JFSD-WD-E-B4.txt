@@ -23,7 +23,7 @@ Java Enhancement Proposal -> JEP
 
 			Back ward compatability..
 
-	Install JDK :
+Install JDK : Open JDK , Oracle JDK, Amazon Coretto JDK..
 
 		Edit environment variables(installed JDK) and edit path (bin)
 		cmd -> check java -version		
@@ -78,6 +78,10 @@ Object Creation :
 
 A method inside a method -> compilation error
 
+Install git : https://git-scm.com/downloads
+
+
+Repository : https://github.com/kavyamaremalla/JFSD-WD-E-B4
 
 git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git --> for the first time
 git pull -> daily, you will get updates.
@@ -85,3 +89,55 @@ git pull -> daily, you will get updates.
 Task :
 
 Create a class `Student` with a non-static variable `studentId` and a static variable `universityName`. Write methods to display `studentId` and `universityName`, and a static method to update `universityName`. In the `main` method of `HelloWorld`, create two `Student` objects, assign different `studentId` values, display their details, update `universityName` using the static method, and display the details again. Observe how the change in `universityName` affects both objects.
+
+16/10/24 
+
+	1. primitive Data Types : Stores simple values directly in memory 
+		byte : 8-bit (-128 to 127)
+		short : 16-bit
+		int : 32-bit
+		long : 64-bit
+		float : 32-bit , floating point number (single precision)
+		double : 64-bit, floating point number (double precision)
+		char : 16-bit unicode charcter, single alphabet
+		boolean : true or false
+
+	2. Non-Primitive Data Types or Reference Data types : store references to objects(memory address)
+
+		String : sequence of characters (number, alphabet, spcl charcters)
+		Arrays : group -> collection of elements of same data type
+		Class : blue-print of objects
+		Interfaces : set of methods which class implement
+		Enumerator .. Enum : represent fixed set of constants
+
+	3. Wrapper classes: wraps around primitive data types : Objects
+		a. When you work with Collection of Objects
+		b. Generics
+		c. autoboxing -> primitive to wrapper and vice-versa -> unboxing
+		d. Data Conversion : Type Casting
+		c. to store null values
+		e. Serialization : conversion of objects to byte stream
+
+instanceof -> objectName instanceof DataType/ClassName -> true	
+
+toString -> can't NPE
+String.valueof() -> handle NPE
+
+		Integer myInt = null;
+        Integer.valueOf(myInt);
+        myInt.intValue();	
+
+//byte < short < char < int < long < float < double
+
+
+Variables :
+	Local or Instance : Scope is limited to method
+	Global : scope is limited to Class		
+
+Literals : Values assigned to variables
+
+Identifiers : names you give to variables, methods, classes, packages
+
+KeyWords : predefined functionality and they can't be identifiers
+
+Operators and Conditional Statements :

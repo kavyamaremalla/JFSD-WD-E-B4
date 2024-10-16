@@ -13,6 +13,11 @@ public class HelloWorld {
 
     public static void main(String[] args){ // static
 
+        DataTypes dataTypes  = new DataTypes();
+        dataTypes.y = 18;
+
+        System.out.println(dataTypes instanceof DataTypes);
+
 //        System.out.println(1/0);
 
         System.out.println("Hello, from main method");
@@ -32,7 +37,7 @@ public class HelloWorld {
         int result = sub(10, 1); //calling sub
 
         System.out.println(helloWorld.add(1,2)); //calling the method
-        
+
         System.out.println(result);
 
     }
