@@ -88,7 +88,11 @@ git pull -> daily, you will get updates.
 
 Task :
 
-Create a class `Student` with a non-static variable `studentId` and a static variable `universityName`. Write methods to display `studentId` and `universityName`, and a static method to update `universityName`. In the `main` method of `HelloWorld`, create two `Student` objects, assign different `studentId` values, display their details, update `universityName` using the static method, and display the details again. Observe how the change in `universityName` affects both objects.
+Create a class `Student` with a non-static variable `studentId` and a static variable `universityName`. 
+Write methods to display `studentId` and `universityName`, 
+and a static method to update `universityName`.
+In the `main` method of `Student`, create two `Student` objects, assign different `studentId` values, display their details, update `universityName` using the static method, and display the details again. 
+Observe how the change in `universityName` affects both objects.
 
 16/10/24 
 
@@ -129,6 +133,8 @@ String.valueof() -> handle NPE
 
 //byte < short < char < int < long < float < double
 
+narrow -> Manual Cast
+and wide casting -> automatic casting
 
 Variables :
 	Local or Instance : Scope is limited to method
@@ -140,4 +146,41 @@ Identifiers : names you give to variables, methods, classes, packages
 
 KeyWords : predefined functionality and they can't be identifiers
 
-Operators and Conditional Statements :
+17/10/2024
+
+Operators : perform some calculations/operation on variables or values
+
+	Arithmetic Operators : Basic Math : + , -, *, /, %(modulus), ++, --
+		++a -> PreIncrement
+		a++ -> PostIncrement
+
+1) Post-Increment (a++): we use a++ in our statement if we want to use the current value, and then we want to increment the value of a by 1.
+2) Pre-Increment(++a): We use ++a in our statement if we want to increment the value of a by 1 and then use it in our statement.
+
+	Assignment Operators -> =, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=
+		int a = 6 
+		a += 5; --> a = a(6) + 5 => 11
+	Comparison Operators/Relational Operators -> ==, !=, >, <, >=, <=
+	Logical Operators : &&, ||, !
+		&& -> If one statement is false, result will be false
+		|| -> If one statement is true, result will be true
+	Bitwise Operators &, |, ^, ~, <<(Signed left shift), >>(Signed right shift), >>>(Unsigned right)
+	Unary Operators :  ++, -- (Pre and Post), 
+			Unary plus , 
+			unary minus, unary !
+	InstanceOf Operator : instanceof
+	
+	Ternary Operator ?
+
+Conditional Statements : if, if-else, if-else-if, nested if
+	Scanner -> take input from user
+	Debug your code -> put breakpoints, start in debug mode
+
+Switch Statement : switch, case, break
+	When you have to check multiple conditions, instead of "if", we can use Switch
+
+Loops : for, for each, nested for, while, do while
+	If you want to execute a piece of code many times until the condition is satisfied
+	
+	for loop :
+	 for(initialize a variable; condition; increment/decrement.. post or pre operator)
