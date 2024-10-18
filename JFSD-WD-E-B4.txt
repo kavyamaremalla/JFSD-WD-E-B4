@@ -78,13 +78,6 @@ Object Creation :
 
 A method inside a method -> compilation error
 
-Install git : https://git-scm.com/downloads
-
-
-Repository : https://github.com/kavyamaremalla/JFSD-WD-E-B4
-
-git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git --> for the first time
-git pull -> daily, you will get updates.
 
 Task :
 
@@ -154,8 +147,8 @@ Operators : perform some calculations/operation on variables or values
 		++a -> PreIncrement
 		a++ -> PostIncrement
 
-1) Post-Increment (a++): we use a++ in our statement if we want to use the current value, and then we want to increment the value of a by 1.
-2) Pre-Increment(++a): We use ++a in our statement if we want to increment the value of a by 1 and then use it in our statement.
+1)++Post-Increment (a++):++we use a++ in our statement if we want to use the current value, and then we want to increment the value of ++a by 1.
+2)Pre-Increment(++a): We use ++a in our statement if we want to increment the value of ++a by 1 and then use it in our statement.
 
 	Assignment Operators -> =, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=
 		int a = 6 
@@ -171,6 +164,9 @@ Operators : perform some calculations/operation on variables or values
 	InstanceOf Operator : instanceof
 	
 	Ternary Operator ?
+		condition ? expression1 : expression2
+			condition == true then expression1 will be executed
+			condition == false then expression2 will be executed
 
 Conditional Statements : if, if-else, if-else-if, nested if
 	Scanner -> take input from user
@@ -179,8 +175,40 @@ Conditional Statements : if, if-else, if-else-if, nested if
 Switch Statement : switch, case, break
 	When you have to check multiple conditions, instead of "if", we can use Switch
 
-Loops : for, for each, nested for, while, do while
-	If you want to execute a piece of code many times until the condition is satisfied
+Loops : for, for-each/enhanced for -> Collections, nested for, infinite-for loop
+		If you want to execute a piece of code many times until the condition is satisfied
+			for loop :
+	 	for(initialize a variable; condition; increment/decrement.. post or pre operator)
+		nested for loop : loop inside loop 
+
+		while : repetetive block of code execution as long as condition is true, 
+		do while : atleast once, execute code irrespective condition
+		infinite loop using while
+
+jump statements -> break, continue, return 
+
+Push your code to github
+
+Install git : https://git-scm.com/downloads
+
+
+Repository : https://github.com/kavyamaremalla/JFSD-WD-E-B4
+
+git clone https://github.com/kavyamaremalla/JFSD-WD-E-B4.git --> for the first time
+git pull -> daily, you will get updates.
+
+Push your code from your system to github repo :
 	
-	for loop :
-	 for(initialize a variable; condition; increment/decrement.. post or pre operator)
+	git add .
+	git status -> Optional, to check what files you are going to commit
+	git commit -m "Your_Message"
+	git push
+
+Submit a task :
+	Don't add zip files
+	Add question and screenshot of your output
+	Follow proper naming conventions
+	Add comments, describing what the method does
+
+	
+	
