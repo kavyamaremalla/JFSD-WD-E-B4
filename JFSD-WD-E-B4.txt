@@ -210,5 +210,53 @@ Submit a task :
 	Follow proper naming conventions
 	Add comments, describing what the method does
 
+21/10/24 : Arrays : 
+		Data structure -> stores fixed-size of same data type elements
+						  organize data -> to access, modify, manage
+						  index -> starts with 0 and this is position
+
+		Types of Arrays ->
+
+			One-Dimensional Array -> A linear list of elements
+			Two-Dimensional Array -> A table like structure.. rows and columns just like matrix	
+			Multi-Dimensional Array -> more than 2 dimensions
+
+			length -> size of array		  
+
+Insert -> Adding an element into array
+			arrayName[indexPosition] = valueOfElement;
+
+Read an Array -> for loop
+				 Arrays.toString(nameOfArray) -> prints you whole array
+
+Update an Array ->
+	
+	nameOfArray[indexPositionToUpdate] = upadtedValue
+
+	    int[] numbers = {1,2,3,4,5};
+
+        numbers = Arrays.copyOf(numbers, numbers.length + 1);
+        numbers[5] = 61;
+
+AccessModifiers : class, method, constructor, attributes
+
+    public : for all classes irrespective packages -> through out your application
+    private : code is accessible within the declared class
+    default : code is accessible within same package
+    protected : code is accessible in the same package and subclasses (child classes in other package)
+
+Non-Access Modifiers :
+
+	final : classes/attributes/methods -> can't extend/can't modify/can't override
+	abstract : class/method
+	static : method,attribute level
+	transient attribute/method level
+	synchronized : one thread at a time
+	volatile : attribute -> cache thread locally
+
+RegExpression :
+
+
 	
 	
+

@@ -16,6 +16,7 @@ public class HelloWorld {
         DataTypes dataTypes  = new DataTypes();
         dataTypes.y = 18;
 
+        String
         System.out.println(dataTypes instanceof DataTypes);
 
 //        System.out.println(1/0);
@@ -26,6 +27,7 @@ public class HelloWorld {
 
         HelloWorld helloWorld1 = new HelloWorld(); //second object
 
+        helloWorld1.add(7,8);
 
         System.out.println(helloWorld.x); // calling non-static variable from static method
 
@@ -43,7 +45,7 @@ public class HelloWorld {
     }
 
     //Method declaration
-    public int add(int a, int b){ //non-static method
+    private int add(int a, int b){ //non-static method
 //        int a = 10;
         return a + b;
     }
