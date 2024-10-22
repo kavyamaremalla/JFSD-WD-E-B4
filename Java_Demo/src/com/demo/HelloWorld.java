@@ -16,7 +16,6 @@ public class HelloWorld {
         DataTypes dataTypes  = new DataTypes();
         dataTypes.y = 18;
 
-        String
         System.out.println(dataTypes instanceof DataTypes);
 
 //        System.out.println(1/0);

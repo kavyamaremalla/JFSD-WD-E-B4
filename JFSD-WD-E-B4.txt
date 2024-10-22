@@ -238,6 +238,8 @@ Update an Array ->
         numbers = Arrays.copyOf(numbers, numbers.length + 1);
         numbers[5] = 61;
 
+Search and Sort in Array    
+
 AccessModifiers : class, method, constructor, attributes
 
     public : for all classes irrespective packages -> through out your application
@@ -254,9 +256,68 @@ Non-Access Modifiers :
 	synchronized : one thread at a time
 	volatile : attribute -> cache thread locally
 
-RegExpression :
+22/10/24 :
 
+Introduction to Strings :
 
-	
-	
+String : A sequence of characters and it's considered as Object in Java. 
+		 String is an immutable object -> once created it can't be changed	
+
+String Methods :
+			
+			length
+			charAt(index position) -> character
+			indexOf("character") -> position
+			concat -> combining string
+			toUpperCase / toLowerCase
+			equals/equalsIgnoreCase
+			repeat
+			trim -> removes whitespaces from ends
+			replace -> replace a character
+			subString -> only begin index or begin inclusive, end exclusive index
+
+String Builder vs Buffer : like string but mutable
+		Buffer -> thread-safety, synchronous
+		Builder -> not-synchronized, faster execution
+
+String Manipulation -> substring, replace, concate 
+
+String Constant Pool (SCP) ->	special memory inside heap memory where string literals 	are stored.	
+	Java checks if string exists 
+	-> If exists, it points/refers to existing object
+	-> Else, it creates a new object
+
+Regular Expression : RegEx -- https://regex101.com/
+				Patterns used to match character combinations in Strings
+				[aA0-zZ9]
+				\d -> decimal
+				\D -> non-decimal
+				\w -> decimal + non-decimal
+				\W -> special characters or alpha-numeric
+				. -> \w + \W
+				.*
+				.+
+
+Math Operations -> java.util.Math
+				sqrt
+				abs
+				min
+				max
+				round
+				floor
+				ceil
+				log
+				random
+
+OOPS  : Object Oriented Programming
+
+		based on the concept of "Object" -> both data and methods
+
+	Principles :
+		
+		Encapsulation : Wrapping data(variables) and methods into a single unit.
+		Inheritance : A class can inherit properties and behavior of another class.
+		Polymorphism : Single action can behave differently based on the object on which it works./ which exists in multiple forms
+		Abstraction : hiding internal logic/implementation and show the essential features.
+
 
