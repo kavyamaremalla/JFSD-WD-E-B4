@@ -270,7 +270,7 @@ String Methods :
 			indexOf("character") -> position
 			concat -> combining string
 			toUpperCase / toLowerCase
-			equals/equalsIgnoreCase
+			equals/equalsIgnoreCase, == (memory/reference)
 			repeat
 			trim -> removes whitespaces from ends
 			replace -> replace a character
@@ -279,11 +279,15 @@ String Methods :
 String Builder vs Buffer : like string but mutable
 		Buffer -> thread-safety, synchronous
 		Builder -> not-synchronized, faster execution
+		reverse -> in built methods
 
 String Manipulation -> substring, replace, concate 
 
-String Constant Pool (SCP) ->	special memory inside heap memory where string literals 	are stored.	
-	Java checks if string exists 
+String Constant Pool (SCP) ->	special memory inside heap memory where string literals 	are stored.
+	(String name = "John" -> literal gets stored in String pool.. 
+	String surname = new String("Doe").. heap memory -> String Object)
+
+	Literals : Java checks if string exists 
 	-> If exists, it points/refers to existing object
 	-> Else, it creates a new object
 
@@ -309,6 +313,24 @@ Math Operations -> java.util.Math
 				log
 				random
 
+Object Creation :
+
+		new key word
+		clone -> copies of objects
+		Constructor<ClassName>
+		Class<?>
+		Serialization and deserialization
+
+Constructors : create an object 
+			   Special method used to initialize objects, set initial values for object attributes
+			   Constructor will be called when an object of class is created		
+
+Types of Constructors :
+
+	1. Default Constructor -> Java provides through Object.class
+	2. Parameterized Constructor -> any number of arguments
+	3. No Argument Constructor -> set initial values, and no parameters
+
 OOPS  : Object Oriented Programming
 
 		based on the concept of "Object" -> both data and methods
@@ -319,5 +341,38 @@ OOPS  : Object Oriented Programming
 		Inheritance : A class can inherit properties and behavior of another class.
 		Polymorphism : Single action can behave differently based on the object on which it works./ which exists in multiple forms
 		Abstraction : hiding internal logic/implementation and show the essential features.
+		Assosciation
+		Aggregation
+		Composition
+
+Inheritance : is-a relationship 
+			It's possible to inherit attributes and methods from one class to another class
+
+			  subclass -> child -> this is the class which inheits prop/behaviour from another class
+			  superclass -> parent -> this is the class which is being inherited from	
+
+			  extends keyWord -> child extends parent
+			 
+			  multiple inheritance -> not supported
+			  				extending two classes
+
+			  single -> only one class extending one parent				
+
+			  Why multiple inheritance is not supported 
+			  				- complexity :  should be readable and simple
+			  				- Diamond Problem 
+			  					same method names or same variables in two parent classes then child will get confused/ambiguity which one to pick				
+			  multi level inheritance -> supported
+			  		Car extends Vehicle and Vehicle extends HelloWorld
+
+			  hierarchical -> multiple children for a parent	-> supported				
+
+			  hybrid -> hierarchical + single (HelloWorld)	
 
 
+This & Super KeyWords : 
+
+
+Immutable, final
+
+Polymorphism
