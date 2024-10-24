@@ -372,7 +372,30 @@ Inheritance : is-a relationship
 
 This & Super KeyWords : 
 
+			this : refers to the current instance of a class, used to access instance variables and methods for current class
+			super : refers to the parent class object, used to access instance variables and methods for parent class
 
-Immutable, final
+			super -> called parent's objects and methods
+			this -> to eliminate the confusion between class objects and parameters in constructor with the same name
+				Call another constructor in same class :: Constructor Chaining
+				this.age++ -> returning the current object.. method chaining
+				can pass current class object as an argument using this keyword
 
-Polymorphism
+Polymorphism : "many forms" : Occurs when we have multiple classes which are related to 				each other by inherutance... you can do single action in multiple ways
+
+			-> Compile Time Polymorphism -> Method Overloading
+					multiple methods with same method name in same class can exist until the input parameters doesn't match
+					Return type -> int -> count of i/p parameters doesn't match
+						method1 -> int a, int b, int c
+						method2 -> int a , int b
+					Void Return Type ->
+						count matches but type of data in input parameters doesn't match
+							
+					During compile time, jvm will decide which method to call
+
+					Ambiguity -> when compiler can't decide which method to execute
+						prevention : give proper i/p so that compiler understands
+
+			-> Run Time Polymorphism -> Method Overriding
+
+
