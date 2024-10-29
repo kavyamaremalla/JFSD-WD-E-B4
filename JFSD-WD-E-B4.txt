@@ -358,7 +358,7 @@ Inheritance : is-a relationship
 
 			  single -> only one class extending one parent				
 
-			  Why multiple inheritance is not supported 
+			  Why multiple inheritance using extends is not supported 
 			  				- complexity :  should be readable and simple
 			  				- Diamond Problem 
 			  					same method names or same variables in two parent classes then child will get confused/ambiguity which one to pick				
@@ -381,9 +381,10 @@ This & Super KeyWords :
 				this.age++ -> returning the current object.. method chaining
 				can pass current class object as an argument using this keyword
 
-Polymorphism : "many forms" : Occurs when we have multiple classes which are related to 				each other by inherutance... you can do single action in multiple ways
+Polymorphism : "many forms" : Occurs when we have multiple classes which are related to 				each other by inheritance... you can do single action in multiple ways
 
-			-> Compile Time Polymorphism -> Method Overloading
+			-> Compile Time Polymorphism -> Method Overloading -> Static Binding
+
 					multiple methods with same method name in same class can exist until the input parameters doesn't match
 					Return type -> int -> count of i/p parameters doesn't match
 						method1 -> int a, int b, int c
@@ -396,6 +397,101 @@ Polymorphism : "many forms" : Occurs when we have multiple classes which are rel
 					Ambiguity -> when compiler can't decide which method to execute
 						prevention : give proper i/p so that compiler understands
 
-			-> Run Time Polymorphism -> Method Overriding
+			-> Run Time Polymorphism -> Method Overriding -> Dynamic Binding
+				During run-time jvm determines which method to run/call
+				From Parent, we can create a child class object
+
+			@Override : Indicate that method in child is intended to override the method 	in parent class
+				-> If method is not present in parent, but when we try to override in child, it gives compilation error.
+				-> Applicable only on method not on constructors/variables
+				-> Checks for name of method, count and type of input parameters, return type of parent method -> If it doesn't match, throws compilation error.
+				-> Improve readability 
+
+				-> Cannot override a static method in parent
+
+Encapsulation -> Hiding our sensitive information from users.
+		-> variables/methods/constructors/attributes :: declare them as private
+		-> how to access and update private variables ? -> getters and setters..
+		-> Improved security and flexibility
+
+Abstraction : Data Abstraction is hiding complex implementation/logic and showing the 				  essential details... 
+
+	Achieve abstraction -> using abstract class or using interface
+
+			  abstract class -> abstract keyword on classes/methods not on variables
+
+			  		this class can have abstract methods and non-abstract methods
+
+			  	Method : 
+			  	
+			  	abstract -> should not give body
+			  	Suppose we extend this abstract class by any child class -> must override this abstract method, orElse compilation error
+			  			non-abstract methods may or may not be overriden
+
+			  			For abstract methods -> sub-class/child will give the body/implementation		
+
+			  	Create objects ->
+			  		When we create object for parent it will bring all the abstract methods along with new object
+			  		Restricted class -> inherit class and create object using sub class						
+			  
+			  interface ->	Purely abstract -> we can achieve 100% abstraction
+
+			  	abstract methods -> Before Java 8
+			  	default and static methods -> After Java 8
+
+			  	implements -> keyword you will use on classes which implement interface
+
+			  	By default, all the methods in interface are abstract.
+			  	If we try to give a non-abstract method ->
+
+			  	   public void eat(){
+        			System.out.println("Animal is eating");
+    				} --> in interface, this gives compilation error.
+			  
+    			can't extend an interface, we should implement an interface.		
+
+    		Multiple Inheritance through Interface is supported
+
+   Abstract Class : partial abstarction, contains both abstract and non-abstract methods, a sub-class can extend only one abstract class
+
+   Interface : full abstraction, all methods are abstract by default, a class can implement multiple interfaces 
+
+final keyword :
+
+	variable -> can't change the value of variable.. it will be constant.
+	method -> can't override a final method
+	class -> can't extend, prevents the class being a child/subclassed   
+
+
+toString -> a string representation of object 
+			good practice to override toString to read a meaningful object during debugging
+			display readable format of an object not some random address.
+
+
+hashCode and equals : to compare two objects effectively
+				equals -> if object values are equal(every field in object should be equal)
+				hashCode -> provides hash-code value so that objects can br grouped.
+
+POJO : Plain Old Java Object
+
+	DTO, entity, model
+
+	Used to represent data -> declare fields, getters and setters, constructors, toString, hashcode and equals.
+
+	Just used for data storage and retrieval
+
+Immutable Class : whose objects can't be modified once created.
+			To maintain consistency, thread-safe
+
+By default, you have String..
+
+			how to create an immutable class :
+
+				1. Declare class as final -> prevents sub classing
+				2. Make all fields private and final -> prevent modification
+				3. Don't provide setter methods
+				
+
+Exception Handling :
 
 

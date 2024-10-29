@@ -1,10 +1,14 @@
 package com.demo;
 
+import java.util.ArrayList;
+
 public class Animal {
 
     String name = "Animal";
 
     String type;
+
+//    ArrayList<Student> students = new ArrayList<>();
 
     public Animal(String type){
         this.type = type;
