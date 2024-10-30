@@ -439,7 +439,7 @@ Abstraction : Data Abstraction is hiding complex implementation/logic and showin
 			  	abstract methods -> Before Java 8
 			  	default and static methods -> After Java 8
 
-			  	implements -> keyword you will use on classes which implement interface
+			  	implements -> keyword you will use on classes to implement interface
 
 			  	By default, all the methods in interface are abstract.
 			  	If we try to give a non-abstract method ->
@@ -448,13 +448,26 @@ Abstraction : Data Abstraction is hiding complex implementation/logic and showin
         			System.out.println("Animal is eating");
     				} --> in interface, this gives compilation error.
 			  
-    			can't extend an interface, we should implement an interface.		
+    			can't extend an interface by class, we should implement an interface.	
+    			An interface can extend interface.	
 
     		Multiple Inheritance through Interface is supported
 
    Abstract Class : partial abstarction, contains both abstract and non-abstract methods, a sub-class can extend only one abstract class
 
    Interface : full abstraction, all methods are abstract by default, a class can implement multiple interfaces 
+
+Assosciation : objects --> one-to-one, one-to-many, many-to-one, many-to-many --> mapping
+
+Aggregation : has-a relationship -> parent and child exist independently
+
+				Ex : An engine can exist with out a car
+
+Composition	: parent and child are dependent
+
+				Page --> Book
+
+	Task : Try to do practical examples on assosciation, aggregation and composition			
 
 final keyword :
 
@@ -490,8 +503,52 @@ By default, you have String..
 				1. Declare class as final -> prevents sub classing
 				2. Make all fields private and final -> prevent modification
 				3. Don't provide setter methods
-				
+	
 
-Exception Handling :
+Exception/Error Handling : 
 
+		try : Where we put piece of code which may throw exception
+		catch : handle the exception thrown by try block
+		finally : After try-catch even if an exception is thrown or not this block will be executed..
 
+		try-catch-finally : db operations, file handling, n/w connections
+
+		Finally block will not be executed if 
+
+			-> System.exit, JVM terminates the program
+			-> exception in finally block and if you don't catch it
+			-> infinite loops/waits
+			-> thread death
+			-> System crashes
+
+		one try	can have multiple catches and a single finally block
+
+			multiple catches -> follow hierarchy in blocks,For eg: first block if we give parent(eg : Exception) and second block (NullPointerException) -> throws compile time error.
+
+		one method can have multiple try blocks.
+
+Exception hierarchy -> 
+
+	Object -> Throwable -> Exceptions -> 
+								Checked Exceptions : CompileTime -> ClassNotFound, etc
+									Exception should be handled by User, shouldn't extend RunTimeException
+								UnChecked Exceptions : RunTime -> Arithmetic, NullPointer etc
+			Throwable	-> Errors --> Eg : Assertion Error, OutofMemoryError, StackOverFlowError, etc
+
+throw -> line level, throw an exception for a method
+		  can't throw multiple exceptions
+		  throw new Object of an Exception
+
+throws -> can declare multiple exceptions, this is at method level
+			throws ExceptionClass
+
+CustomExceptions/User-Defined Exceptions :
+	1. extend Exception
+	2. call Parents'constructor from child(user defined exception class) constructor
+
+Errors : unrecoverable
+		 occurs during run time
+		 mostly due to env setup of application
+		 It can't be caught or handled
+		 
+		Ex: StackOverFlowError
