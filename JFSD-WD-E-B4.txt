@@ -552,3 +552,60 @@ Errors : unrecoverable
 		 It can't be caught or handled
 		 
 		Ex: StackOverFlowError
+
+Collections : It's a framework used in managing and grouping objects -> provided some set of interfaces and classes
+
+Iterable --> Collection ->
+					List : ArrayList, LinkedList, Vector, Stack 
+					Set : HashSet, LinkedHashSet, 
+						SortedSet : TreeSet
+					Queue : Priority Queue
+						Deque : ArrayDeque
+
+Exist independently -> Maps -> keys and values pair	: HashMap,  LinkedHashMap, Hashtable
+							SortedMap : TreeMap	
+
+
+List -> allowing duplicates, insertion order
+
+	add -> inserts an element
+	remove -> deletes the element at given index position
+	get -> brings an element in given index position
+	contains -> true if element is present in list and false if element is not present in list
+	update ->         list.set(2, 9); -> replaces index 2 with element 9
+
+	Linkedlist -> removeFirst, removeLast, removeFirstOccurence.. lastOccurence	
+
+		Single
+		Double
+		Circular
+
+	Vector -> synchronized
+	
+	Stack -> Last In First Out (LIFO)
+
+		push, pop, add, get, contains, remove, peek -> last index positioned element i.e., top of the stack, set
+
+Set : No duplicates allowed
+
+	add, remove, contains
+	no concept of index -> you can't get an element
+
+
+		hashSet :  Unordered
+		treeSet :  SortedOrder -> 
+					numbers -> ascending order
+					String -> dictionary order
+
+		linkedhashset -> follows insertion order
+		
+Null -> one null is allowed in set	
+		many nulls are allowed in list
+
+Efficiency -> Time Complexity and Space Complexity.
+
+Map
+
+Queue
+
+Dequeue
