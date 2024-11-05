@@ -21,6 +21,10 @@ public class LinkedListDemo {
         linkedList.add(38);
         linkedList.add(5);
 
+        for (Integer entry : linkedList){
+            System.out.println(entry);
+        }
+
 
         linkedList.addAll(list);//5,22,5,38,5,7,17
        //        linkedList.removeFirstOccurrence(5);
@@ -28,6 +32,8 @@ public class LinkedListDemo {
 
 //        linkedList.isEmpty();
 //        linkedList.remove(2);
+
+            linkedList.size();
 
 //        linkedList.removeFirst(); //remove first index element
 //        linkedList.removeLast();//removes last index element

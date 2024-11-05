@@ -555,7 +555,8 @@ Errors : unrecoverable
 
 Collections : It's a framework used in managing and grouping objects -> provided some set of interfaces and classes
 
-Iterable --> Collection ->
+Iterable --> Collection -> use non-primitive or wrapper classes.. we can't use primitive data types, it gives compilation error.
+
 					List : ArrayList, LinkedList, Vector, Stack 
 					Set : HashSet, LinkedHashSet, 
 						SortedSet : TreeSet
@@ -568,23 +569,28 @@ Exist independently -> Maps -> keys and values pair	: HashMap,  LinkedHashMap, H
 
 List -> allowing duplicates, insertion order
 
+	Collections.sort(list) -> ascending order
+	
 	add -> inserts an element
 	remove -> deletes the element at given index position
 	get -> brings an element in given index position
 	contains -> true if element is present in list and false if element is not present in list
-	update ->         list.set(2, 9); -> replaces index 2 with element 9
+	update -> list.set(2, 9); -> replaces index 2 with element 9
 
-	Linkedlist -> removeFirst, removeLast, removeFirstOccurence.. lastOccurence	
+	Linkedlist -> removeFirst, removeLast, removeFirstOccurence, removeLastOccurence	
 
-		Single
-		Double
+		Singly
+		Doubly
 		Circular
 
 	Vector -> synchronized
 	
-	Stack -> Last In First Out (LIFO)
+	Stack -> Last In First Out (LIFO) principle
 
-		push, pop, add, get, contains, remove, peek -> last index positioned element i.e., top of the stack, set
+		push, pop, add, get, contains, remove, peek -> last index positioned element i.e., top of the stack, set methods
+
+		. duplicates & null values are allowed
+		. remove, removeAt, add, addAt etc
 
 Set : No duplicates allowed
 
@@ -593,19 +599,85 @@ Set : No duplicates allowed
 
 
 		hashSet :  Unordered
+					. no insertion order, based on hash of objects it inserts & displays the values
+					. allows null values
+					. removeIf, remove, removeAll
+
 		treeSet :  SortedOrder -> 
 					numbers -> ascending order
 					String -> dictionary order
 
+  					. no null values allowed
+  					. uses comparable, only the comparable objects are allowed
+
 		linkedhashset -> follows insertion order
-		
+
 Null -> one null is allowed in set	
 		many nulls are allowed in list
 
 Efficiency -> Time Complexity and Space Complexity.
 
-Map
+Map : stores objects as key and value pairs
+		key -> acts like index and it's unique
+		value -> data value
 
-Queue
+		put -> to insert key and value into a map
 
-Dequeue
+		get(key) -> returns you value corresponding to the respective key
+
+		remove -> returns value and removes key, value pair from the map
+
+		clear -> removes all the pairs in map
+
+		keySet -> returns set of keys ->no duplicates allowed
+
+		If we put same key, different value -> updates value to the same key
+
+		values -> Collection of Values
+
+		entrySet -> set of entries of key and value pair
+			entry -> one key and it's value is called entry
+
+		for (Map.Entry entry : hashMap.entrySet()){
+            System.out.println(entry);
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        	}
+
+        containsKey, containsValue	
+
+hashMap: internal working of a hashmap
+
+	. no order, based on hashing it gives result
+	. duplicates keys are not allowed, duplicate values can be allowed
+	. you can update value while creation itself
+	. allows null key and null values
+
+	linkedHashMap -> Map + hashmap : allows null key and null values, follows insertion order
+
+	TreeMap -> Map + sorted map : doesn't allow any null keys and null values are allowed.
+			Sorted by key
+
+Queue : Implemented by 
+			PriorityQueue
+			LinkedList
+			ArrayDeque
+		Extended by -> Deque, BlockingQueue, BlockingDeque
+
+		. FIFO -> First In First Out
+		. create & adding elements to queue
+		. read queue
+		. allows duplicates
+		. doesn't allow null
+		. pull, element, remove, add, peek
+
+
+Deque -> extends Queue
+		ArrayDeque
+
+		. LIFO -> Last In First Out	 & FIFO -> First In First Out
+		. we can add/remove elements from both sides
+		. insertion order
+		. null values not allowed
+		. duplicates are allowed
+		. pollFirst, pollLast, removeFirst, removeLast, addFirst, addLast, removeLastOccurence, removeFirstOccurence, offerFirst, offerLast, peekFirst, peekLast
