@@ -6,7 +6,7 @@ public interface VehicleInterface {
 
     abstract  void startEngine();
 
-    void stopEngine();
+    abstract void stopEngine();
 
 }
 

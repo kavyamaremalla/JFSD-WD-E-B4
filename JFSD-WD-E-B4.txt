@@ -633,7 +633,7 @@ Map : stores objects as key and value pairs
 
 		If we put same key, different value -> updates value to the same key
 
-		values -> Collection of Values
+		values -> Collection of Values/data
 
 		entrySet -> set of entries of key and value pair
 			entry -> one key and it's value is called entry
@@ -681,3 +681,85 @@ Deque -> extends Queue
 		. null values not allowed
 		. duplicates are allowed
 		. pollFirst, pollLast, removeFirst, removeLast, addFirst, addLast, removeLastOccurence, removeFirstOccurence, offerFirst, offerLast, peekFirst, peekLast
+
+06/11/24 :
+
+Multi Threading : Extension of multi processing
+		Threads -> each thread can run parallely
+
+Life Cycle of Thread : 
+
+	new Thread() -> creates a thread
+	start() ->	Runnable 
+			-> Thread runs -> Running
+				-> wait/suspend/sleep
+				-> dead -> end of the execution
+	Priority -> scheduling the threads
+			1(Min_Priority) to 10(Max_Priority), 5(Norm_Priority)		
+
+Create a thread ->
+			implement Runnable/Callable interfaces
+				Runnable -> just runs
+				Callable -> throw exception and return some result
+			extends Thread
+
+
+Communication between threads :
+
+	If threads wait for each other -> Synchronous Communication
+	If threads don't wait for each other and run parallely -> Asynchronous communication							
+	Prefer implementing over extending -> you can implement multiple interfaces but can extend only one class
+
+	deadlock -> when two threads wait for each other..
+		synchronized keyword
+
+Java 8 : Advanced Java 
+
+	Features : What changes they made/ what they introduced newly
+
+		Functional Interfaces
+		Lambda Expressions
+		Stream API
+		Method References
+		Default and Static methods in interface
+		Optional.class
+		forEach
+		Collectors class
+		Date and Time Changes
+
+Functional Interfaces : single abstract method (SAM)
+	custom FI -> create an interface and annotate with @FunctionalInterface, write an abstract method
+	if you add one more abstract -> it will throw compilation error.
+
+		FI extends other FI -> make sure through out you have a single abstract method
+
+		FI extends normal Interface -> make sure through out you have a single abstract method
+
+		Types : (Bi)Consumer, (Bi)Supplier, (Bi)Functional, (Bi)Predicate
+
+Lambda Expressions :: To write clear anonymous functions on SAM interface, we use lambda
+
+
+	() -> expression;
+
+	parameter -> expression; (symbol ->)
+
+	(parameter1, parameter2) -> expression
+
+	(parameter1, parameter2) -> {
+		code logic
+	}
+
+
+	we don't have to write return keyword 
+	We can't use for any type of class .. applicable only on interfaces
+
+
+Consumer -> only accepts, doesn't return
+
+		single i/p argument -> accepts and performs some logic
+
+		BiConsumer -> two i/p arguments
+
+		List -> Arrays.asList
+		forEach on a collection
