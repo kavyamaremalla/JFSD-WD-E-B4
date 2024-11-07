@@ -735,7 +735,7 @@ Functional Interfaces : single abstract method (SAM)
 
 		FI extends normal Interface -> make sure through out you have a single abstract method
 
-		Types : (Bi)Consumer, (Bi)Supplier, (Bi)Functional, (Bi)Predicate
+		Types : (Bi)Consumer, Supplier, (Bi)Functional, (Bi)Predicate
 
 Lambda Expressions :: To write clear anonymous functions on SAM interface, we use lambda
 
@@ -754,6 +754,8 @@ Lambda Expressions :: To write clear anonymous functions on SAM interface, we us
 	we don't have to write return keyword 
 	We can't use for any type of class .. applicable only on interfaces
 
+Stream API : on any collection -> to process data we use streams API
+			Eg : forEach, filter
 
 Consumer -> only accepts, doesn't return
 
@@ -761,5 +763,32 @@ Consumer -> only accepts, doesn't return
 
 		BiConsumer -> two i/p arguments
 
-		List -> Arrays.asList
-		forEach on a collection
+		create a List using -> Arrays.asList
+		forEach on a Collection -> Consumer
+
+Predicate -> predict output -> represents some condition or filter, accept i/p and return boolean.. 
+			Commonly used for filtering collections
+
+		Predicate -> one i/p argument
+		BiPredicate -> two i/p arguments
+
+		Eg : filter -> Predicate
+
+
+Function -> takes i/p and gives some o/p
+
+		Function -> one i/p and one o/p
+
+		BiFunction -> two inputs and one o/p
+
+		Used for mapping values or transforming values
+
+Supplier -> gives results, doesn't take input
+		
+		Supplier -> one result
+
+Functional Programming	-> Java 8 supports functional programming
+
+	By implementing lambdas, we can achieve functional programming
+	-> more readable, less code, less debugging, more concise
+
