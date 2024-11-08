@@ -755,7 +755,7 @@ Lambda Expressions :: To write clear anonymous functions on SAM interface, we us
 	We can't use for any type of class .. applicable only on interfaces
 
 Stream API : on any collection -> to process data we use streams API
-			Eg : forEach, filter
+			Eg : forEach, filter, map, object(like product), Stream.of, flatMap
 
 Consumer -> only accepts, doesn't return
 
@@ -791,4 +791,23 @@ Functional Programming	-> Java 8 supports functional programming
 
 	By implementing lambdas, we can achieve functional programming
 	-> more readable, less code, less debugging, more concise
+
+Optional -> An object may or may not contain a value, could be null.. to handle these null values, we use Optional Class	
+
+Method References -> Replace to lambda, used often on functional interfaces
+
+	Notation ::
+	More readable
+	We can have one argument in lambda as i/p parameter for a method to use method reference
+
+	Types : 
+		Reference to a static method
+		Reference to a constructor
+		Reference to a non-static(instance) method
+
+Callable -> similar to runnable, but diff is this returns output and throws a checked exception
+
+Future -> result of asynch comm'ctn. It provides method to check if the computation is complete and wait for the completion then bring the result.
+
+Use Case : suppose you have some async communication and you want result later, eg : loading data in background!
 
