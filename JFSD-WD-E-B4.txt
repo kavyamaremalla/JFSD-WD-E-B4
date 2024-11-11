@@ -721,11 +721,11 @@ Java 8 : Advanced Java
 		Lambda Expressions
 		Stream API
 		Method References
-		Default and Static methods in interface
 		Optional.class
 		forEach
 		Collectors class
 		Date and Time Changes
+		Default and Static methods in interface
 
 Functional Interfaces : single abstract method (SAM)
 	custom FI -> create an interface and annotate with @FunctionalInterface, write an abstract method
@@ -810,4 +810,73 @@ Callable -> similar to runnable, but diff is this returns output and throws a ch
 Future -> result of asynch comm'ctn. It provides method to check if the computation is complete and wait for the completion then bring the result.
 
 Use Case : suppose you have some async communication and you want result later, eg : loading data in background!
+
+CompletableFuture and CompletionStage :
+	CompletableFuture is part of java concurrency API -> provides asynch programming by implementing the CompletionStage -> this allows composition of tasks which depend on one another
+
+Default and Static methods in interface
+
+	-> provides more flexibility and reduces the need for abstract classes
+
+Default : allows interfaces to have implementations that can be used or overriden(optional) by implementing classes., enable backward compatability.
+
+Static : provides a way to add some utility methods directly into interface, which can be called without an instance of implementing class.
+	Directly called from interface not from child object
+
+Date and Time Changes
+
+	Java 8 -> new Date Time API 
+
+LocalDate, LocalTime, LocalDateTime -> java.time package
+
+ZonedDateTime -> date-time with timezone	
+
+Instant -> timestamp(relative to UTC)
+
+ChronoUnit
+
+Duration and Period
+	Duration -> measures amount of time in hours, seconds, minutes -> used for time based calculations
+	Period -> measures amount of time in years, months, days -> used for date based calculations
+		
+Temporal Adjusters, DateTimeFormatter -> read about this
+
+Private methods in Interface -> from Java 9
+	Allow developers to encapsulate common code within interface
+	These can be used either by default or static methods in interface, not possible with abstract methods because they don't have body.
+
+	Use Case : 
+		Avoid code duplication within interfaces
+		Allows to use common logic
+
+var KeyWord	: Introduced in Java 10
+		For any local variable type, allows compiler to determine the type of variable based on assigned value
+
+	Use Case : to ensure type safety	
+		mostly used in iterators(loops), simple data types, stream api
+
+	 var num = 16;
+     var nameOfPerson = "Peter";
+
+        System.out.println(num + " Person is " + nameOfPerson);	
+
+ Limitations :
+ 
+  We can use this keyword for local variable data type replacement only
+  	Can't use as global variable
+  	Can't be applied as method input parameters, method return types  
+  	Can't initialize null values using var keyword
+  	Can't be used as static variables
+
+Text Blocks : Introduced in Java 13 
+
+	Allow for multi line string literals enclosed """
+
+	Use Case : Simplify creation of multi line strings especially during SQL queries, JSON, HTML etc in Java
+
+Records 
+
+Switch Expression Changes
+
+Collectors API & Immutable Collections
 
