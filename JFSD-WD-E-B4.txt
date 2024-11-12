@@ -874,9 +874,55 @@ Text Blocks : Introduced in Java 13
 
 	Use Case : Simplify creation of multi line strings especially during SQL queries, JSON, HTML etc in Java
 
-Records 
+Records : Java 14 introduced
+
+	compact way of defining a immutable data classes that only need data type and name of the fields
+
+	Java compiler ->	built in parameterized constructor, getter for every field, toString, hashcode and equals
+
+	can create and refer to static variable and static methods
+
+		Use this for simplicity/readablity and immutability, reduces boiler plate code
 
 Switch Expression Changes
+	Java 12 : Introduced lambda, return values from switch case
 
-Collectors API & Immutable Collections
+	Boiler plate code
 
+	Java 17 : multiple statements in case
+		yield to return a value
+
+Collectors API & Immutable Collections -> Once created, state can't be changed
+
+	Introduced in Java 9
+
+	To create immutable collection so that no body can modify it.
+
+	Set.of, Map.of, List.of
+
+	Collectors.toUnmodifiable List or Set or Map
+
+
+Sorting -> only in modifiable list, can't do in immutable list
+
+Collections.sort(list); -> by default it gives ascending order
+
+Collections.sort(list, Collections.reverseOrder()); or list.sort(Collections.reverseOrder()); 
+
+Enumerator -> enum keyword to create 
+
+spcl class representing group of constants (unchangeable variables like final variables)
+
+Generics : Allow you to write classes, fields, interfaces, methods with a place holder for types -> type-safety and reusable
+
+	<>-> generics
+
+	HELP in preventing run time errors by catching the type mismatches during compile itself
+
+	T : Type -> data types	-> Optional
+	E : Element. in collections to rep type of elements stored -> List
+	K : Key, used in maps for rep keys -> Map
+	V : Value, used in maps for rep values assosciated with keys -> Map
+	S, U, V, W -> for additional types -> BiConsumer
+
+Comparator -> 
