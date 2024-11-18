@@ -6,10 +6,11 @@ public class ArrayIndexPosition {
 
 
         int[] input={1,3,6,7};
-        int target=2;
-        Boolean flag=true;
-        for(int i=0;i<input.length;i++)
-        {
+        int target=9;
+
+        boolean flag=true;
+        for(int i=0;i<input.length;i++){
+
             if(input[i]==target)
             {
                 System.out.println(i);
