@@ -1082,8 +1082,6 @@ Git work flow -> deployment
 
 	git rebase doesn't preserve commit history but merge preserves.
 
-
-
 	git stash
 
 		When ever you perform a push
@@ -1098,9 +1096,129 @@ Git work flow -> deployment
 		git -> commands
 		local history -> shows all history file	
 
-
 	Settings in repository -> delete a repository.			
 
+HTML -> Hyper Text Mark Up Language
+
+	-> create web pages
+	-> describes structure of web page
+	-> contains series of elements
+	-> used to tell browser how to display content
+
+Visual Studio Code ->	
+
+Extensions :
+	vscode-icons : icons in vs code
+	Prettier - Code formatter : to format any UI code
+	Live Preview -> run code in vs code tool
+	GitHub Actions -> git commands
+
+HTML Tags -> define html elements with tags
+
+< starts with and ends with >
+	opening tag <>
+	content
+	closing tag	</>
+
+	<tagName> content to display </tagName>
+
+<!DOCTYPE html> -> first tag browser interacts with & this means you are using HTML5 version.
+
+html tag -> root element
+head -> meta info abt page & body -> all doc body.. tables, images, links, headings, paras etc
+
+h1 to h6, p tag, a tag (anchor).. href -> attribute
+
+img tag
+
+ 	Absolute url -> link external image
+	relative url -> your domain
+
+element -> starting tag to closing tag
+
+empty elements -> no closing tag : br, hr
+
+Attributes : additional info about elements, always specified in starting tag, usually exist in pairs
+
+ style="
+      background-color: aqua;
+      font-size: 100%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+      color : blue
+    "
+
+<b> -> bold
+<strong> -> bold but more priority
+
+<i> -> italic
+<em> -> emphasized.. italic but more priority
+
+<sub> -> subscript
+<sup> -> super script
+
+<del>, <ins>
+
+Semantic tags : header, article, section, footer, nav
+
+tables : table, tr, td, th
+
+CSS :
+
+	Inline -> applying in starting ta
+	Internal -> in html
+	External -> separate file and import it in html
+
+units : %(parent), px(1/96th of inch and multiples of 16), em(element), rem(root element)	
+
+	 1em = 16px
+	 1rem = 16px
+	 100% = 16px
+
+
+
+padding -> space btwn cell edges and cell content
+spacing -> space btwn one cell to another cell
+
+zebra stripes in tables
+
+colspan, rowspan
+
+colgroup
+
+
+Lists : ordered, unordered, descriptive
+		nested lists -> list inside a list
+
+	li, ul, ol, dl, dt, dd
+
+	ul -> style : list-style-type -> disc, square, circle, none
+	ol -> type = A/a/1/I/i, start = "50"
+
+
+
+Tags : div and span
+
+	class to style -> .ClassName
+	id to style  -> #IdName
+
+
+Forms : Collect user input & through backend we send this info to process further
+
+ <form>
+        <label for="username">UserName: </label>
+        <input type="text" id="username" name="username" placeholder="Enter your username"> <br> <br>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd" name="pwd" placeholder="Enter your password"> <br> <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    type -> validation and types of input (checkbox, radio,email, tel etc)
+    bind label with input we give for and id as same values
+
+    name -> value of i/p will be sent further.
+
+    
 
 
 
