@@ -1163,19 +1163,11 @@ Semantic tags : header, article, section, footer, nav
 
 tables : table, tr, td, th
 
-CSS :
-
-	Inline -> applying in starting ta
-	Internal -> in html
-	External -> separate file and import it in html
-
 units : %(parent), px(1/96th of inch and multiples of 16), em(element), rem(root element)	
 
 	 1em = 16px
 	 1rem = 16px
 	 100% = 16px
-
-
 
 padding -> space btwn cell edges and cell content
 spacing -> space btwn one cell to another cell
@@ -1219,6 +1211,66 @@ Forms : Collect user input & through backend we send this info to process furthe
     name -> value of i/p will be sent further.
 
     
+Html and css tasks :
+
+For 7 and 8 question in html, kindly create a card size form by taking aadhar,pancard instead of given link. For 8, you can use below reference to create table https://i.stack.imgur.com/aJIRk.png
+
+Form atrributes : 
+
+	action -> data sent to file or link (useful when working with backend)
+	target -> tells where to display response
+			_blank, _self(default),_parent,_top, framename
+	method : get, post
+	autocomplete -> suggestions while filling the form
+	novalidate -> will not validate types		
+
+Form Elements :
+
+	form, input, label, textarea, fieldset, legend, option, select, optgroup, output, button, datalist
+
+Input Types :  radio, check, password, email, range etc
+
+Input attributes : value, readonly, disabled, size, maxlength, min, max, multiple, pattern, placeholder, required, autofocus etc
+
+Form attributes : method, action, target, novalidate, autocomplete etc
+
+CSS : Cascading Style Sheets -> html elements
+
+CSS Types :
+
+	Inline -> applying in starting ta
+	Internal -> in html
+	External -> separate file and import it in html
+
+	Using class and id, we can apply styles
+
+Box model : describes the dimensions of an element(content, padding, border, margin) -> to understand the spacing and sizing of an element or section
+
+content : content of the box where you have text, images, links etc
+padding : area around the content.. transparent
+border : goes around padding and content
+margin : area outside the border..
+
+CSS Selectors : class(.), id(#), universal selector(*), 
+grouping selector(table,td,th)
+
+CSS Flexbox : flexbox modes
+		block ->  sections in a webpage
+		inline -> for text
+		table -> for 2D table data
+		positioned -> for explicit position of an element
+
+	flex-direction -> row, column, reverse for row and column
+	flex-wrap -> nowrap(default), wrap, wrap-reverse
+	flex-flow -> row wrap -> direction + wrap
+	justify-content -> center, space-around, space between
+
+Media Queries : 	
+
+
+
+
+
 
 
 
