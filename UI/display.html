@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display</title>
+    <!-- <meta name="viewport" content="device-width, initial-scale=1.0"> -->
+  </head>
+
+  <style>
+    span.a{
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+    }
+
+    span.b{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+    }
+
+    span.c{
+        display: inline; /*default*/
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+    }
+  </style>
+  <body>
+    <h1>Display Property</h1>
+
+    <h2>display : block</h2>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis
+      ut voluptatibus reiciendis ab illum enim corrupti ducimus iste et
+      temporibus voluptas similique, <span class="a">Harry</span>
+      <span class="a">Potter</span> a debitis pariatur? Recusandae dignissimos
+      optio eaque?
+    </div>
+
+    <h2>display : inline-block</h2>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis
+      ut voluptatibus reiciendis ab illum enim corrupti ducimus iste et
+      temporibus voluptas similique, <span class="b">Harry</span>
+      <span class="b">Potter</span> a debitis pariatur? Recusandae dignissimos
+      optio eaque?
+    </div>
+
+    <h2>display : inline</h2>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis
+      ut voluptatibus reiciendis ab illum enim corrupti ducimus iste et
+      temporibus voluptas similique, <span class="c">Harry</span>
+      <span class="c">Potter</span> a debitis pariatur? Recusandae dignissimos
+      optio eaque?
+    </div>
+  </body>
+</html>

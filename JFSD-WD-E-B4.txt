@@ -1265,8 +1265,27 @@ CSS Flexbox : flexbox modes
 	flex-flow -> row wrap -> direction + wrap
 	justify-content -> center, space-around, space between
 
-Media Queries : 	
+Media Queries : Responsive design, we use media queries :
+	
+	Apply styles based on screen size or devicce size.
 
+ same website : tv, laptop/PC or tablet or mobile -> it shouldn't loose its characteristics.
+
+Breakpoints in media queries
+
+display :
+	none
+	block
+	inline
+	inline-block
+
+navbar -> using ul and display
+
+CSS Positions - relative , Absolute , static(default) , fixed, sticky
+
+creating layouts -> flex, grid, float
+
+Create a Landing Page Using HTML , CSS
 
 
 

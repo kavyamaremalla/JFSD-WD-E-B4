@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Queries</title>
+    <!-- <meta name="viewport" content="device-width, initial-scale=1.0"> -->
+  </head>
+
+  <style>
+    .media{
+        padding: 20px;
+        color: white;
+    }
+
+    body{
+        background-color: lightgreen;
+    }
+
+    /* mobiles */
+    @media only screen and (max-width:600px) {
+        .media{
+            background-color: red;
+        }
+    }
+    /* for potrait tabs */
+    @media only screen and (min-width:600px) {
+        .media{
+            background-color: green;
+        }
+    }
+
+    /* landscape tabs */
+    @media only screen and (min-width:768px) {
+        .media{
+            background-color: blue;
+        }
+    }
+    /* laptops/desktops */
+    @media only screen and (min-width:992px) {
+        .media{
+            background-color: orange;
+        }
+    }
+
+    @media only screen and (orientation:landscape) {
+        body{
+            background-color: lightblue;
+        }
+    }
+
+    /* large laptops */
+    @media only screen and (min-width:1200px) {
+        .media{
+            background-color: pink;
+            font-size: 100px;
+        }
+    }
+
+       /* large laptops */
+       @media only screen and (min-width:600px) {
+        div{
+            display: none;
+        }
+    }
+
+
+  </style>
+  <body>
+    <h1>Media Query Breakpoints</h1>
+    <p class="media">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+      debitis distinctio! Tempore, odio magni veritatis laborum aliquam omnis
+      quia? Modi laudantium sapiente eligendi quis deserunt. Voluptatum,
+      possimus ratione! Facilis, quod.
+    </p>
+
+    <div style="background-color: yellow; padding: 20px;">Example of division</div>
+  </body>
+</html>
