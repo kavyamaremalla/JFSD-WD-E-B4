@@ -1287,9 +1287,69 @@ creating layouts -> flex, grid, float
 
 Create a Landing Page Using HTML , CSS
 
+Deploy UI Code : render, netlify(more popular), firebase(backed up by google), github deployment
 
+RWD : Responsive Web Design -> layout and content adapts to any screen size to different screens or designs
+	
+	TailWind CSS -> framework on CSS -> utility classes -> utility first approach
+		install node and install tailwindCSS
+		https://tailwindcss.com/docs/installation
 
+		link tailwind CSS in html using tailwind CDN link
 
+     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
+     sm -> 640px
+     md -> 768px
+     lg -> 1024px
+     xl -> 1280px
+     xxl -> 1536px
 
+	BootStrap -> framework ->pre-defined classes -> component first approach
+
+Mobile-First approach -> designing for mobiles first and them for larger screens., by default bootstrap follows this.
+
+Set-up bootstrap -> install using npm or through links in html.
+
+Layout : built using grid system -> flexible, responsive structure for creating consistent designs across devices.
+
+grid -> row, columns -> responsive layouts
+
+Each row in a webpage is divided into 12 columns
+
+	    <div class="container">
+        <div class="row">
+            <div class="col-md-6">Left Column</div>
+            <div class="col-md-6">Right Column</div>
+        </div>
+
+Layouts using Bootstrap's utility classes :
+
+fixed-layout -> container : fixed-width
+fluid-width layout -> container-fluid -> full-width container
+responsive layout with breakpoints -> container-md
+		xs -> <768px : phones
+		sm -> >=768px : tablets
+		md -> >=992px : small laptops
+		lg -> >=1200px : laptops and desktops
+
+Bootstrap classes : 
+
+	tables
+	container
+	typography -> text-center, fw-bold, text-primary
+	spacing -> m-3, p-2, mt-4
+	colors -> bg-success
+	button -> btn
+	forms -> form-control, form-check
+	grid -> row, col-6, g-3(gutters)		
+	spinner -> which loads when we open some page
+	scrollspy -> inline with document -> we will navigate in navbar
+	navbar -> navigation bar in any webpage
+	modal -> pop-up when clicked on a button
+	alert -> gives alert message when clicked on some button
+	carousel -> sliding images like we have in amazon
+	breadcrumb -> location addressing
+Task on pagination.. gives page numbers like a book online or google search
+	flex, display, overflow
 
