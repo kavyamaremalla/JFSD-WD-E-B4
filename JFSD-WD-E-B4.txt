@@ -1148,6 +1148,10 @@ Attributes : additional info about elements, always specified in starting tag, u
       color : blue
     "
 
+   <title>
+   Favicon -> image near the title
+   	 <link rel="icon" type="image/x-icon" href="images/sunset.jpg"> 
+
 <b> -> bold
 <strong> -> bold but more priority
 
@@ -1352,4 +1356,58 @@ Bootstrap classes :
 	breadcrumb -> location addressing
 Task on pagination.. gives page numbers like a book online or google search
 	flex, display, overflow
+
+**************** JavaScript : Dynamic website ****************
+
+Resume -> static page
+facebook.com/github.com -> dynamic sites/pages
+
+html -> to define content of web page
+
+CSS -> to specify layout of the web page., styling your html
+
+Javascript ->	to program the behaviour of a web page
+
+html -> <script> means java script --> Internal JS 
+		or .js file to use javascript --> External JS
+
+DOM : Document Object Model -> refers html doc
+BOM : Browser Object Model -> refers browser
+
+To run js using .js file install -> https://nodejs.org/en/download/package-manager
+
+Variables -> storing data values
+
+Automatically decalre eg : x = 8;
+ES5 var -> function scope -> older browsers
+ES6 let -> block-scoped
+ES6 const ->  constant value, block scoped
+
+block-scoped -> can not redeclare
+
+DataTypes -> 8 Data types
+
+	String, Number, BigInt, Boolean, Undefined, Null, Symbol, Object
+
+	Object -> user-defined and in-built
+
+	in-built -> arrays, objects, dates, maps, sets, promises etc
+	user-defined -> json
+		Java Script Object Notation
+		exists in key and value pair like map in java
+		JSON objects in .json file
+
+== and ===
+
+	let color = "Red" //string
+	let color1 = new String("Red") //object
+
+
+	console.log(color == color1); //true : check only value
+	console.log(color === color1); //false : checks data type and value
+
+Operators : mathematical and logical computations
+	arithmetic, assignment, comparison, string, logical, bitwise, terenary, type (typeOf, instanceOf)
+
+
 

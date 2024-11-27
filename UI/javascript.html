@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Demo</title>
+    <link rel="icon" type="image/x-icon" href="images/sunset.jpg">
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <p id="demo1"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =  5 + 6; //writing to html element i.e., tag
+        document.write(5 + 10);  //wirtes to the document HTML doc
+        window.alert(7 + 7) //alert when you load html -> writes to browser/window
+        console.log("Javascript in html page!") //writing to console in browser
+
+        let carName = "Kia"
+        document.getElementById('demo').innerHTML = carName
+        
+        </script>
+
+    <br><br>
+
+    <button type="button" onclick="document.write(5 + 15)">Try to find sum of two values using doc write</button>
+     <br> <br>
+
+    <button type="button" onclick="document.getElementById('demo1').innerHTML = 5 + 9">getElementById</button>
+</body>
+
+</html>
