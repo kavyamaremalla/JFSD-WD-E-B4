@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alert, Confirm, Prompt Box</title>
+  </head>
+
+  <body>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <script>
+        function showAlert(params) {
+            alert("This is an alert box")
+        }
+
+        function showConfirm(params) {
+            const userConfirmed = confirm("Do you want to proceed ? ")
+            console.log(userConfirmed ? "User Confirmed" : "User cancelled request");
+        }
+
+        function showPrompt(params) {
+            const userInput = prompt("Enter your name : ")
+            console.log(userInput ? `Hello, ${userInput}!` : "No input provided");
+            
+        }
+
+    </script>
+  </body>
+</html>

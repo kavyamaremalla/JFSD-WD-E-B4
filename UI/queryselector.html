@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Query Selector Example</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <p class="text">Hello Team!</p>
+      <p class="text">Javascript Selectors Topics!</p>
+    </div>
+
+    <script>
+      const firstParagraph = document.querySelector('.text')
+      console.log(firstParagraph.textContent + "From first paragraph");
+      
+      const allParagraphs = document.querySelectorAll('.text')
+      allParagraphs.forEach(p => console.log(p.textContent))
+
+    </script>
+  </body>
+</html>

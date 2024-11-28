@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>JS Demo</title>
-    <link rel="icon" type="image/x-icon" href="images/sunset.jpg">
-</head>
+    <link rel="icon" type="image/x-icon" href="images/sunset.jpg" />
+  </head>
 
-<body>
+  <body>
     <p id="demo"></p>
 
     <p id="demo1"></p>
 
+    <h1 class="head"></h1>
+    <h1>Hi</h1>
+
     <script>
-        document.getElementById("demo").innerHTML =  5 + 6; //writing to html element i.e., tag
-        document.write(5 + 10);  //wirtes to the document HTML doc
-        window.alert(7 + 7) //alert when you load html -> writes to browser/window
-        console.log("Javascript in html page!") //writing to console in browser
+      document.write(5 + 10); //wirtes to the document HTML doc
+      window.alert(7 + 7); //alert when you load html -> writes to browser/window
+      console.log("Javascript in html page!"); //writing to console in browser
 
-        let carName = "Kia"
-        document.getElementById('demo').innerHTML = carName
-        
-        </script>
+      //By Id
+      document.getElementById("demo").innerHTML = 5 + 6; //writing to html element i.e., tag
 
-    <br><br>
+      let carName = "Kia";
+      document.getElementById("demo").innerHTML = carName;
+      
+      //By Class Name
+      const collection = document.getElementsByClassName("head");
+      collection[0].innerHTML = "Hello, Welcome to JS!";
 
-    <button type="button" onclick="document.write(5 + 15)">Try to find sum of two values using doc write</button>
-     <br> <br>
+      //By tag name
+      const headerTag = document.getElementsByTagName('h1')
+      console.log(headerTag.length); //how many header tags you have, length of the tags
+      
 
-    <button type="button" onclick="document.getElementById('demo1').innerHTML = 5 + 9">getElementById</button>
-</body>
 
+    </script>
+
+    <br /><br />
+
+    <button type="button" onclick="document.write(5 + 15)">
+      Try to find sum of two values using doc write
+    </button>
+    <br />
+    <br />
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo1').innerHTML = 5 + 9"
+    >
+      getElementById
+    </button>
+  </body>
 </html>

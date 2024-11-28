@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Append & Append Child</title>
+  </head>
+
+  <body>
+    <ul id="list">
+      <li>Item 1</li>
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+      function addItem() {
+        const list = document.getElementById("list");
+        const newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+        list.appendChild(newItem);
+        list.append("li");
+      }
+    </script>
+
+    <div id="myDiv">Parent Div</div>
+    
+    <script>
+      // Using append()
+      const parent = document.getElementById("myDiv");
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = "This is a new paragraph.";
+
+      parent.append(newParagraph, " and some text");
+
+      // Using appendChild()
+      const anotherParagraph = document.createElement("p");
+      anotherParagraph.textContent = "Another paragraph.";
+
+      parent.appendChild(anotherParagraph);
+    </script>
+  </body>
+</html>

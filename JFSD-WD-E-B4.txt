@@ -1378,7 +1378,7 @@ To run js using .js file install -> https://nodejs.org/en/download/package-manag
 
 Variables -> storing data values
 
-Automatically decalre eg : x = 8;
+Automatically declare eg : x = 8;
 ES5 var -> function scope -> older browsers
 ES6 let -> block-scoped
 ES6 const ->  constant value, block scoped
@@ -1409,5 +1409,67 @@ DataTypes -> 8 Data types
 Operators : mathematical and logical computations
 	arithmetic, assignment, comparison, string, logical, bitwise, terenary, type (typeOf, instanceOf)
 
+Functions :
 
+we can assign a variable to a function
+invoking a function
+
+NaN -> not a number
+
+function declaration, function expression(assign to variable), arrow function (like lambda in java), method (function in an object), constructor function(data types constructor), immediately invoking function, selft invoking function, generator function (yield keyword), async function
+
+Array Operations : 
+
+const cars = ["Tata", "kia", "BMW"]
+const fruits = new Array("apple", "banana", "guava", "kiwi")
+
+array to String.
+
+forEach ->
+
+function display(val) {
+    console.log(val);
+    
+}
+
+fruits.forEach(display)
+
+Arrow Function : fruits.forEach((val) => console.log(val))
+
+Task : 
+Array methods : concat, splice, slice, shift, copywithin etc
+join, push,pop, unshift, flat,reverse
+
+Strings :
+
+backticks : template literals :
+
+let welcomeNote = `Welcome ${firstName}, ${lastName}`
+console.log(welcomeNote);
+
+$ -> used to refer variable and without backticks & $ this won't work
+
+Task :
+methods : length, charAt, slice, split, touppercase, lowercase, substring etc
+
+Loops : 
+
+foreach -> accepts a function
+for -> traditional for.. with expressions or conditions
+for of -> loop through values of objects
+for in -> loop through properties of objects
+
+QuerySelector
+
+document.querySelector -> selects the first element which matches CSS selector
+document.querySelectorAll -> selects all the elements which match CSS selector
+
+AlertBox -> gives user an alert
+confirm box -> asks to proceed or not -> sent to backend for processing
+prompt box -> user can give input -> sent to backend for processing
+
+Append and Append Child
+
+append -> adds content at the end of element
+appendChild -> add an element node to the end of the list
 
