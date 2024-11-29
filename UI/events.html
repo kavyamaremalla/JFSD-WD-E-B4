@@ -4,5 +4,30 @@
     <title>Events</title>
   </head>
 
-  <body></body>
+  <body>
+    <button id="eventButton">Click Me!</button>
+
+    <input type="text" id="inputElement" placeholder="Enter numbers only">
+
+    <script>
+
+      const button = document.getElementById('eventButton')
+
+      button.addEventListener('click', () => {
+        alert('Button on clicked!')
+      });
+
+
+      const inputField = document.getElementById('inputElement')
+      inputField.addEventListener("keypress", (ip) => {
+        //check if key is not a number or a backspace or left arrow or right arrow
+        if(!/[0-9]/.test(ip.key) && !['Backspace', 'ArrowLeft', 'ArrowRight'].includes(ip.key)){
+          event.preventDefault();
+          alert("Please enter number only or backspace, left and right arrow keys only!")
+        }
+      });
+
+    </script>
+
+  </body>
 </html>

@@ -1442,7 +1442,7 @@ join, push,pop, unshift, flat,reverse
 
 Strings :
 
-backticks : template literals :
+backticks :- template literals 
 
 let welcomeNote = `Welcome ${firstName}, ${lastName}`
 console.log(welcomeNote);
@@ -1473,3 +1473,28 @@ Append and Append Child
 append -> adds content at the end of element
 appendChild -> add an element node to the end of the list
 
+Events : clicks, keypresses
+
+Arrow Function =>
+
+Rest vs Spread Operator ...
+	in function it's rest operator
+	in arrays it's spread operator
+
+Array & Object Destructure
+
+Array Destructuring : 
+
+	Basic destructuring
+	Skipping Elements
+	Default Values
+	Nested Array Destructuring
+
+Object Destructuring :
+
+	Basic destructuring : extracted properties of object
+	Rename the variables
+	Default Values	
+	Nested Object Destructuring
+
+Destructuring with functions -> Array and Object	
