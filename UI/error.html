@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>Please enter number between 1 nd 10 :</p>
+    <input id="demo" type="text" />
+
+    <button type="button" onclick="myFunction()">Test Input</button>
+
+    <p id="p01"></p>
+
+    <script>
+      function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+          if (x.trim() == "") throw "can't be empty";
+          if (isNaN(x)) throw "is not a number"; //if x is text
+        //   x = Number(x);
+          if (x < 1) throw "should be > 1";
+          if (x > 10) throw "should be < 10";
+        } catch (error) {
+            message.innerHTML = "Input " + error
+            // console.log(error.message() + " " + error.name());
+            
+        }finally{
+            document.getElementById("demo").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -9,9 +9,15 @@
     <button onclick="showConfirm()">Show Confirm</button>
     <button onclick="showPrompt()">Show Prompt</button>
 
+    <p id="demo"></p>
+
     <script>
         function showAlert(params) {
-            alert("This is an alert box")
+           try {
+             alert("This is an alert box")
+           } catch (error) {
+            document.getElementById("demo").innerHTML = error.message;
+           }
         }
 
         function showConfirm(params) {

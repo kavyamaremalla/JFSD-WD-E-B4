@@ -1497,4 +1497,40 @@ Object Destructuring :
 	Default Values	
 	Nested Object Destructuring
 
-Destructuring with functions -> Array and Object	
+Destructuring with functions -> Array and Object
+
+Error Handling in JS : 	
+
+	try -> statement which may throw error
+	catch -> to handle error
+	finally -> block to run regardless of your result
+	throw -> custom error
+
+	try {
+		block of code to try
+	}catch (err){
+		code to handle errors
+	}finally {
+	    run everytime 
+	}
+
+Errors : Type Error, Reference , Range, Syntax Error, URI Error, Eval (eval())	
+
+use strict -> if you don't define variables they give error
+
+Asynchronous Programming : API calls, setTimeout, file reading..
+
+Closures -> global variable can be made local(private)
+
+Self -Invoking Function -> assign a func to variable and call at the end
+
+Callbacks -> define func, but we pass this as arg to other function and call when required
+
+Promises : definitely promises a result -> resolve and reject
+States in promises : 
+	FulFilled
+	Pending
+	Rejected
+
+	Producing code : can take some time
+	consuming code : should wait for the result
