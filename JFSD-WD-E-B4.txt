@@ -1516,11 +1516,11 @@ Error Handling in JS :
 
 Errors : Type Error, Reference , Range, Syntax Error, URI Error, Eval (eval())	
 
-use strict -> if you don't define variables they give error
+use strict : key word-> if you don't define variables they give error
 
 Asynchronous Programming : API calls, setTimeout, file reading..
 
-Closures -> global variable can be made local(private)
+Closures -> global variable can be made as a local(private)
 
 Self -Invoking Function -> assign a func to variable and call at the end
 
@@ -1534,3 +1534,31 @@ States in promises :
 
 	Producing code : can take some time
 	consuming code : should wait for the result
+
+	setTimeout in a promise
+
+	FileReading using promises
+
+log data from files -> Promises {pending}
+	async function and await keyword -> resolve the promise
+	remove await -> promise {content of file}
+	remove async -> compilation error : await exists with async.. they go hand by hand
+
+Multiple call backs in nested form -> if and else blocks
+To overcome multiple callbacks -> we had promises which has three states
+try and catch block -> async and await keywords	
+
+Fetch -> fetch() method starts the processing of fetching a resource from server
+		fetch() return a Promise that resolves to a response object
+
+Dummy API : https://reqres.in/
+		GET -> get data from server
+		POST -> insert data into server
+		DELETE -> remove data inside server
+		PUT/PATCH -> update existing data inside server
+
+fetch 
+	using promise : get and post
+	using async and await : get and post
+
+Calculator app -> using HTML, CSS and JS	

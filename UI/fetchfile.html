@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo">Change the text with content of file</p>
+    <p id="demo1">Change the text with content of file</p>
+
+    <script>
+      fetch("https://reqres.in/api/users?page=2")
+        .then((res) => res.json())
+        .then((res) => console.log(res));
+
+      let file = "file1.txt";
+      fetch(file)
+        .then((x) => x.text())
+        .then((y) => (document.getElementById("demo").innerHTML = y));
+
+      getText("file3.txt"); //using a async and await
+
+      async function getText(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        document.getElementById("demo1").innerHTML = y;
+      }
+    </script>
+  </body>
+</html>
