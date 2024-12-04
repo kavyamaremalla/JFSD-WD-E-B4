@@ -1562,3 +1562,101 @@ fetch
 	using async and await : get and post
 
 Calculator app -> using HTML, CSS and JS	
+
+*************************** Database *******************
+
+Database -> store some data.. organized way
+		SQL & Non-SQL
+
+		SQL(Structured Query Language) : RDBMS
+			store as Tables -> rows and columns
+			MySQL, Oracle, MS-SQL, Postgres, IBM DB2 etc
+
+		NoSQL -> store as JSON objects
+			MongoDB, MariaDB, Cassandra, Redis, and Amazon DynamoDB
+
+DBMS : Database Management System : communicate users and db	
+	types : hirerachial, relational, network, object oriented
+
+Operations : Create, Read, Update, Delete (CRUD operations)	
+
+Dev (read and write), test, preprod, prod
+
+MySQL : 
+
+Installation and Setup
+
+	Server and WorkBench -> GUI (graphical user interface), shell
+
+Database -> multiple tables inside database
+
+one application can have multiple databases (db1 : sql and db2: nosql)
+
+Query/Command -> to interact with data
+
+DDL : Data Definition Language : create, drop, alter, truncate, rename
+	 table level operations
+
+DML : Data Manipulation Language : Insert, Select, Update, Delete
+	  data level operations
+
+DCL : Data Control Langauge : Grant, Revoke (access or permissions to users)
+
+TCL : Transaction Control Language : Commit, rollback, savepoint   
+
+create database university; -> creates a db/schema
+
+drop database universities; -> delete a db/schema
+
+show databases; -> Retrieves all the dbs in respective host
+
+create table university.students (
+		StudentId int,
+        FirstName varchar(10),
+        LastName varchar(255),
+        isCertified boolean
+);
+
+create table dbName.tableName(
+		column_Name column_type
+	)
+
+drop table todo_management.students;
+	drop table dbName.tableName
+
+Create a table from another existing table :
+
+create table marks as
+	Select StudentId, FirstName from students;
+
+Alter table :
+
+Alter table students
+Add City varchar(100);
+
+alter table students
+drop column City;
+
+alter table students
+modify column city int;
+
+alter table students
+add column LastName varchar(255) After FirstName
+
+Alter table students
+Rename column city to City
+
+alter table lecturer
+rename to lecturerTable
+
+truncate table dataBase.table_Name -> preserve the structure of table, delete the content(data) inside table
+
+DML :
+
+Insert into students(StudentId, FirstName, LastName, isCertified, City)
+Values (1, "John", 'Doe', true, "London");
+
+
+select * from students;
+select * from students where StudentId in ( 1, 2);
+select * from students where city = "London";
