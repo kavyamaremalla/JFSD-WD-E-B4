@@ -1660,3 +1660,84 @@ Values (1, "John", 'Doe', true, "London");
 select * from students;
 select * from students where StudentId in ( 1, 2);
 select * from students where city = "London";
+select * from students where city = 'London' and isCertified = true;
+select * from students where city = 'London' or isCertified = true;
+select distinct(city) from students; -> unique rows for that particular column
+select * from students where not city = 'London';
+
+select * from students where StudentId between 4 and 6
+select * from students where StudentId not between 4 and 6 and StudentId not in  (4) order by FirstName desc
+
+Update students set LastName = 'Doe' --> updates whole table
+Update students set LastName = 'Doe' where StudentId = 1 and FirstName = 'John'
+
+Update students set FirstName = 'John' where city = 'London' -- update multiple records
+
+Delete from students where StudentId = 2 and/or; --multiple records
+Delete from students where StudentId = 1 and city = 'london'; -- single record
+
+select * from university.students; --> deletes data from whole table
+
+diff btwn drop vs truncate vs delete
+
+Aggregate Operations : 
+
+select count(distinct(city)) from students;
+select count(*) from students;
+select count(*) from students where city = 'London';
+
+select avg(marks) from marks;
+
+select sum(marks) as total_marks from marks;
+select avg(marks) as average_mark from marks;
+
+Order By :
+By default when we give a select statment -> primary key asc order
+select * from marks order by FirstName asc; -> by default asc
+select * from marks order by FirstName desc;
+
+Alias : temporarily we can change the name of the column
+
+select min(marks) as Minimum_Mark from marks;
+select max(marks) as Maximum_Mark from marks;
+
+select FirstName as Student_FirstName from marks;
+
+Like : select * from students where LastName like 'P%r'
+
+Constraints -> on table column level
+
+	Unique -> distinct
+	not null -> shouldn't be null
+	default -> default values if not provided during insertion of data
+	check : checks condition on column
+	auto increment -> based on previous value, increase the value
+	Primary key -> unique + not null (can be auto increment)
+		One table will have only one primary key 
+		Student -> StudentID -> PK
+		MarksID -> FK, LecturerID -> FK
+
+		Marks -> MarkID -> PK
+		Lecturer -> LecturerID -> PK
+
+	Foreign Key -> one table can have multiple foreign keys, and it should be a primary key to the referenced table
+		FK -> to bridge the linkage between two tables
+
+
+create table lecturer (
+	LecturerId int NOT NULL UNIQUE auto_increment,
+    StudentId int,
+    Age int,
+    isExperienced boolean DEFAULT false,
+    Check (Age >= 25),
+    PRIMARY KEY(LecturerId),
+    FOREIGN KEY(StudentId) REFERENCES students(StudentID)
+);
+
+Alter table students
+ADD Primary Key (StudentId);
+
+ALTER TABLE `university`.`students` 
+CHANGE COLUMN `isCertified` `isCertified` TINYINT(1) NULL DEFAULT 0 ,
+CHANGE COLUMN `city` `city` VARCHAR(200) CHARACTER SET 'utf8mb3' NULL DEFAULT 'London' ,;
+
