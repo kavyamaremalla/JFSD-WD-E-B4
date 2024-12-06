@@ -1668,6 +1668,10 @@ select * from students where not city = 'London';
 select * from students where StudentId between 4 and 6
 select * from students where StudentId not between 4 and 6 and StudentId not in  (4) order by FirstName desc
 
+Select concat(stu.FirstName, " " , stu.LastName) as FullName from students stu;
+
+select top(5) from students;
+
 Update students set LastName = 'Doe' --> updates whole table
 Update students set LastName = 'Doe' where StudentId = 1 and FirstName = 'John'
 
@@ -1737,7 +1741,119 @@ create table lecturer (
 Alter table students
 ADD Primary Key (StudentId);
 
+Generated one :
+
 ALTER TABLE `university`.`students` 
 CHANGE COLUMN `isCertified` `isCertified` TINYINT(1) NULL DEFAULT 0 ,
 CHANGE COLUMN `city` `city` VARCHAR(200) CHARACTER SET 'utf8mb3' NULL DEFAULT 'London' ,;
 
+Group By : exists with aggregate functions : count, sum, min, max, avg
+		groups the rows that have same values
+
+Having : Where condition in group by statements
+
+select count(StudentId), city  from students where StudentId > 3 group by city order by city desc;
+
+select count(StudentId), city  from students group by city having count(StudentId) = 3 order by count(StudentId) desc
+
+select count(MarksId), FirstName  from marks group by FirstName;
+
+Joins  :  
+		
+	   to combine two or more tables based on related column between then
+	   
+	   Inner Join : bring data that have matching values in both tables
+	   Right Join : brings data from right table and matching from left
+	   Left Join : brings data from left table and matching from right
+	   Cross Join (Cartersian Join) : returns all data from both tables
+	   Self Join
+
+
+	   Inner Join :
+
+	   Select stu.*, mar.Marks from students stu
+	   Inner join marks mar
+       ON stu.StudentId = mar.StudentId;
+
+Left Join :
+
+Select stu.*, mar.Marks from students stu
+Left join marks mar
+ON stu.StudentId = mar.StudentId;
+
+Select stu.*, mar.Marks from marks mar
+Left join students stu
+ON stu.StudentId = mar.StudentId;
+
+
+Right Join :
+
+Select stu.*, mar.Marks from students stu
+Right join marks mar
+ON stu.StudentId = mar.StudentId;
+
+Select stu.*, mar.Marks from marks mar
+Right join students stu
+ON stu.StudentId = mar.StudentId;
+
+Cross Join :
+
+Select stu.*, mar.Marks from students stu
+Cross join marks mar
+
+using where condition on a cross join :
+
+Select stu.*, mar.Marks from students stu
+Cross join marks mar where stu.StudentId = mar.StudentId;
+
+Select stu.*, mar.Marks from students stu
+Cross join marks mar 
+ON stu.StudentId = mar.StudentId; 
+
+Select stu.*, mar.Marks from marks mar
+Right join students stu
+ON stu.StudentId = mar.StudentId where StudentId > 3;
+
+Self Join :
+
+select a.FirstName as Student1, B.FirstName as Student2, A.city
+from students a , students b
+where a.FirstName <> b.FirstName
+and a.city  = b.city
+order by a.city;
+
+<> -> != operator
+
+Multiple tables and multiple joins
+
+Select stu.*, mar.Marks from (students stu
+Inner join marks mar
+Left join lecturer lec
+ON stu.StudentId = mar.StudentId
+on stu.StudentId =  lec.StudentId);
+
+Union and Union all 
+
+Select FirstName as result from students
+union all
+Select StudentId from marks
+
+Select FirstName, LastName result from students stu
+union all
+Select FirstName, StudentId from marks
+
+union -> distinct or unique records
+union all -> all rec even they are duplicated
+
+JDBC : Java Database Connectivity
+
+Download jar -> https://dev.mysql.com/downloads/connector/j/
+
+Select platform independent. Download the zip and unzip it. 
+
+Register the driver class
+Create a connection
+Create a statement
+Execute the query
+Close the connection object
+	
