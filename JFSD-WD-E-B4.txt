@@ -1857,3 +1857,89 @@ Create a statement
 Execute the query
 Close the connection object
 	
+JDBC with maven
+
+maven(m2)/gradle -> build tools
+
+install maven in PC : https://maven.apache.org/download.cgi
+env variables give path
+
+m2 -> https://mvnrepository.com/
+	dependencies , pick the version
+
+maven LifeCycle :
+
+mvn clean install -> lifecycle steps till install
+
+mvn clean install -DskipTests -> skip unit test part
+
+to view jars/xml files -> JavaDecompiler : https://java-decompiler.github.io/
+
+Read about :
+
+indexes 
+Stored procedure
+
+ACID principles, transaction management
+DB profiling
+DB Normalisation
+DB Query Optimization techniques
+
+MongoDB : NoSQL(DynamoDB, Cassandra, MariaDB, DocumentDB) : JSON 
+
+no tables and no rows
+Documents, Collections
+
+Installation : https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
+
+Community version : https://www.mongodb.com/try/download/community
+
+Server from above link 
+
+Tools : Install mongoshell or mongoGUI or from robo mongo site download robo mongo : https://robomongo.org/
+
+Tables -> Collections here
+Rows & Columns -> Documents & Keys
+
+cmd : check mongosh --version
+connect to mongo using : mongosh
+
+27017 -> default port for mongodb
+
+show dbs -> existing database
+
+use dbName -> 
+	switches to that DB and uses this db for further query processing
+	use dbName which doesn't exit it creates a dbName temporarily
+
+Delete DB : be in that db > db.dropDatabase();
+
+db.createCollection("collectionName") -> It creates a db with collection
+
+drop collection :
+
+	db.collectionName.drop();	
+
+Inserting data :
+
+db.marks.insertOne({"subject" : "Maths", sem : 1, isPassed : true, dateOfEvaluation : Date() })
+
+Many objects : array.. 
+
+db.marks.insertMany([{"subject" : "Physics", sem : 1, isPassed : true, dateOfEvaluation : Date() }, {"subject" : "Chemistry", sem : 1, isPassed : true, dateOfEvaluation : Date() }])
+
+Import JSON -> in compass
+
+Read : db.CollectionName.operation
+
+	db.marks.find() -> reads all docs
+	db.marks.findOne() -> first document in collection
+	db.marks.find({sem : 1}) -> where condition in {}
+	db.marks.find({sem : 1, isPassed : true})
+
+	db.marks.find({}, {sem : 1}) //projection object
+	db.marks.find({}, {sem : 1, _id:0}) -> will not bring id
+	db.marks.find({}, {sem : 1, _id:1}) -> brings id
+
+
+
