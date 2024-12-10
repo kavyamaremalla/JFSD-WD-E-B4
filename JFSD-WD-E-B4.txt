@@ -1896,7 +1896,7 @@ Community version : https://www.mongodb.com/try/download/community
 
 Server from above link 
 
-Tools : Install mongoshell or mongoGUI or from robo mongo site download robo mongo : https://robomongo.org/
+Tools : Install mongoshell and mongoGUI or from robo mongo site download robo mongo : https://robomongo.org/
 
 Tables -> Collections here
 Rows & Columns -> Documents & Keys
@@ -1940,6 +1940,149 @@ Read : db.CollectionName.operation
 	db.marks.find({}, {sem : 1}) //projection object
 	db.marks.find({}, {sem : 1, _id:0}) -> will not bring id
 	db.marks.find({}, {sem : 1, _id:1}) -> brings id
+
+Update :
+
+	 db.marks.updateOne({sem : 1}, {$set:{tenure:15}})
+	 db.marks.updateMany({sem : 1}, {$set:{tenure:15}})
+	 	If tenure key is present in json, it updates otherwise it adds
+
+db.marks.updateMany({sem : 1}, {$set:{tenure:15, dateOfModification : Date()}})
+
+upsert : true -> if document is not present, it shall insert object
+
+db.marks.updateMany({sem : 2}, {$set:{tenure:15}}, {upsert:true})
+
+Update Operators : https://www.mongodb.com/docs/manual/reference/operator/update-field/
+
+
+Arrays Operators :
+https://www.mongodb.com/docs/manual/reference/operator/update/positional/
+
+db.marks.updateMany({},{ $addToSet:  { scores: { $each: [ 90, 92, 85 ] } }})
+db.marks.insertOne({myMap : {key1 : "value1", key2 : "value2"}})
+db.marks.updateMany({}, {$set : {myMap : {key1 : "value1", key2 : "value2"}}})
+
+Delete :
+
+student> db.marks.deleteOne({}) //delete first record
+{ acknowledged: true, deletedCount: 1 }
+student> db.marks.deleteOne({name : "John"}) //delete first matched record
+{ acknowledged: true, deletedCount: 0 }
+student> db.marks.deleteOne({sem : 1}) //delete first matched record
+{ acknowledged: true, deletedCount: 1 }
+student> db.marks.deleteMany({sem : 1}) //delete all matched records
+{ acknowledged: true, deletedCount: 4 }
+student> db.marks.deleteMany({}) //delete all records
+{ acknowledged: true, deletedCount: 27 }
+
+Read about index in Mongo
+
+db.marks.find({sem :1}).explain("executionStats")
+ 
+  db.marks.createIndex({'sem' : 1}) -> create index on a key, 1 and -1 means ascending order and desc order respectively
+
+  See docsExamined after indexing
+
+ Comparision operators : 
+ 
+ https://www.mongodb.com/docs/manual/reference/operator/query-comparison/
+
+ $eq, $ne, $gt, $gte, $lt, $lte, $nin
+
+ Aggregate Functions/Operators : https://www.mongodb.com/docs/manual/aggregation/
+
+ Store and execute queries in mongo : 
+
+
+student> const priceOperation = db.marks.find().map(function(e){return e.product_price}).toArray();
+
+student> priceOperation
+[]
+student> for(const price of priceOperation){print ("Product price is " + price)}
+
+student> const products = db.marks.find();
+
+student> products
+
+Validation Mongo : 
+
+https://www.mongodb.com/docs/manual/core/schema-validation/specify-json-schema/#std-label-schema-validation-json
+
+
+Web Application : facebook.com, github.com
+
+	Single Tier :
+			app logic, data processing, UI -> servlets
+
+	Two Tier :
+			two layers : front-end layer(client) and back-end layer(server)
+
+Monolithic :
+
+	whole app is built as a single unit.
+		Tightly coupled : one is dependant on other
+
+					
+Microservices : blocks or small units separately 
+		Loosely coupled : services communicate over network
+			microservice communication
+
+R.E.S.T & Rest API : Representational State Transfer
+	SOAP -> XML based
+	Rest -> plain text, HTML, XML, YAML, and JSON
+	Graph QL
+
+Principles :
+
+	Stateless : no session state is stored on server btwn requests
+	Uniform Interface : to interact with resources
+	Client-Server : separate client and server
+	Cacheable : Responses can be cached to improve performance
+	Layered System : load balancers, proxies, 
+	Code on Demand 
+
+HTTP -> sent over network and clients are decoupled from servers
+
+Methods : GET, POST, PUT, PATCH, DELETE	to communicate with resources (rep by URLS)
+
+Rest API :Application Program Interface :  CRUD ops
+
+	resources : /users, /products, /employees
+	http methods
+	status code : 200 OK, 201 Created, 404 not found
+
+		1xx informational response – the request was received, continuing process
+		2xx successful – the request was successfully received, understood, and accepted
+		3xx redirection – further action needs to be taken in order to complete the request
+		4xx client error – the request contains bad syntax or cannot be fulfilled
+		5xx server error – the server failed to fulfil an apparently valid request
+
+Java Containers & Servlets : 
+
+	Java EE -> JSP (Java server pages acts as front-end), Servlet runs inside servlet container (netty, tomcat, jetty)
+
+	Java container -> manage requests and lifecycle of servlet (initialize, request handling, destruction), provides security, txn management etc
+
+Introduction to Software Design Patterns : 	23..
+
+	Reusable solutions to common problems in software design
+
+	Types : 
+
+	Creational : Singleton, Factory etc
+ 
+	Structural : Adapter, Composite etc
+
+	Behavioral : Observer, Strategy etc
+
+Use Case : maintainability, efficient problem-solving	
+
+
+
+
+
+
 
 
 
