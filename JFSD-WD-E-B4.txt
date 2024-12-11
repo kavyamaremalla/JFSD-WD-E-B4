@@ -1960,6 +1960,7 @@ Arrays Operators :
 https://www.mongodb.com/docs/manual/reference/operator/update/positional/
 
 db.marks.updateMany({},{ $addToSet:  { scores: { $each: [ 90, 92, 85 ] } }})
+
 db.marks.insertOne({myMap : {key1 : "value1", key2 : "value2"}})
 db.marks.updateMany({}, {$set : {myMap : {key1 : "value1", key2 : "value2"}}})
 
@@ -1988,14 +1989,15 @@ db.marks.find({sem :1}).explain("executionStats")
  
  https://www.mongodb.com/docs/manual/reference/operator/query-comparison/
 
- $eq, $ne, $gt, $gte, $lt, $lte, $nin
+ $eq, $ne, $gt, $gte, $lt, $lte, $nin (not in -> array)
 
  Aggregate Functions/Operators : https://www.mongodb.com/docs/manual/aggregation/
 
+ sum, count, group, distinct, match etc
+
  Store and execute queries in mongo : 
 
-
-student> const priceOperation = db.marks.find().map(function(e){return e.product_price}).toArray();
+student> const/let/var priceOperation = db.marks.find().map(function(e){return e.product_price}).toArray();
 
 student> priceOperation
 []
@@ -2003,7 +2005,7 @@ student> for(const price of priceOperation){print ("Product price is " + price)}
 
 student> const products = db.marks.find();
 
-student> products
+student> products -> prints all documents in the collection as per query
 
 Validation Mongo : 
 
@@ -2068,7 +2070,7 @@ Introduction to Software Design Patterns : 	23..
 
 	Reusable solutions to common problems in software design
 
-	Types : 
+Types : 
 
 	Creational : Singleton, Factory etc
  
@@ -2076,7 +2078,43 @@ Introduction to Software Design Patterns : 	23..
 
 	Behavioral : Observer, Strategy etc
 
-Use Case : maintainability, efficient problem-solving	
+Use Case : maintainability, efficient problem-solving
+
+****************** SPRING ************************
+
+Spring Beans : Objects managed by spring framework
+	xml
+	annotations 
+
+Before spring -> Java EE -> Servlets, JSP, and JPA
+
+on CSS -> Bootstrap similarly on Java -> Spring	
+
+Pros : less code, easy to maintain
+all configurations you write in a file, read through xml or properties or annotations
+reduces boiler plate code (repeatition of code)	
+
+CricketCoach object and FootBallCoach Object are tightly coupled? 
+
+To make it as loose coupling, we create an interface.
+
+Spring context -> container -> manage all our beans and bean lifecycle
+
+	Bean Factory
+	Application Context
+
+Spring AOP : Aspect Oriented Programming : logging, txn management, security	
+
+Spring IOC -> Inversion of Control : responsibility of object creation is on spring
+		
+		Spring takes care of object creation till object destruction
+
+DI -> Dependency Injection -> while creating objects, if there's any dependency	req from other classes ---> it will be injected into your respective beans
+	
+Constructor Injection //best thing to do
+Setter Injection //second priority to use
+Field Injection //least priority to use
+
 
 
 
