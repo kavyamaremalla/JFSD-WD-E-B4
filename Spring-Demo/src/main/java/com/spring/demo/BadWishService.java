@@ -3,9 +3,9 @@ package com.spring.demo;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyWishService implements WishService{
+public class BadWishService implements WishService{
     @Override
     public String getDailyWish() {
-        return "All the best, perform well!";
+        return "May you fail!";
     }
 }

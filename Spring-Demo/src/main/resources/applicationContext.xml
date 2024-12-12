@@ -8,14 +8,15 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="application.properties"/>  <!--to read properties file-->
-<!--    <context:component-scan base-package="com.spring.demo"/>-->
+    <context:component-scan base-package="com.spring.demo"/>
 
     <bean id="myWish" class="com.spring.demo.HappyWishService"/>
 
 
 <!--    new bean definition-->
-    <bean id="myCricketCoach" class="com.spring.demo.CricketCoach">
-<!--        <constructor-arg ref="myWish"/>-->
+    <bean id="myCricketCoach" class="com.spring.demo.CricketCoach"
+          init-method="startUpMethod" destroy-method="destroyMethod" scope="prototype">
+        <constructor-arg ref="myWish"/>
         <property name="wishService" ref="myWish"/>
         <property name="email" value="${email}"/>
     </bean>

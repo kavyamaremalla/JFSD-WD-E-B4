@@ -2115,6 +2115,67 @@ Constructor Injection //best thing to do
 Setter Injection //second priority to use
 Field Injection //least priority to use
 
+Scope of Bean : define the lifecycle &  visibility of bean -> spring container
+
+how many instances(copies) of beans are created and how long they're maintained
+
+	1. Singleton(default) -> for stateless beans across app (one bean can be alive)
+	2. Prototype -> as per state multiple beans can be used
+
+	-> Request, Session, Application 
+	-> WebSocket 
+	-> custom scope can also be created
+
+	Singleton -> same hash for multiple objects, destroy method will be called when context is closed 
+
+    prototype -> different hash, different objects,destroy method won't be called
+
+Stereotype Annoatations : Spring will automatically	import the beans into container and inject the dependencies
+
+	1. @Component -> class-level, to mark Spring beans
+	2. @Service
+	3. @Controller
+	4. @Repository
+
+@Configuration
+@ComponentScan("com.spring.demo")
+@PropertySource("application.properties")	
+@Value -> to read properties from app.properties file
+
+@Autowired -> injects dependencies of other class into required class
+
+	Field level ->
+		    @Autowired
+    		private WishService wishService; //field level injection
+
+    Setter Injection ->
+    
+    	@Autowired
+    	public void setWishService(WishService wishService) {
+        	this.wishService = wishService;
+    	}
+
+    Constructor Injection ->
+    
+    	    @Autowired
+    	public CricketCoach(WishService wishService) {
+       	 this.wishService = wishService;
+    	}
+	
+	@Autowired -> Injecting your dependencies
+                : constructor -> mandatory fields
+                : setter -> optional fields
+                : field/class level
+
+@Qualifier -> to give priority to beans
+@PostConstruct -> During bean initialization
+@PreDestroy -> Before destruction
+
+
+@Scope(value = BeanDefinition.SCOPE_SINGLETON)
+@Scope("prototype")
+@Bean -> to use/call third-party libraries (read access)	
+	ModelMapper
 
 
 
