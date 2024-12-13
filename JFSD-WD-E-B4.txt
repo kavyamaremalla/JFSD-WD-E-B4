@@ -2130,7 +2130,8 @@ how many instances(copies) of beans are created and how long they're maintained
 
     prototype -> different hash, different objects,destroy method won't be called
 
-Stereotype Annoatations : Spring will automatically	import the beans into container and inject the dependencies
+Stereotype Annoatations : Spring will automatically	import the beans into container and inject the dependencies in the app Context
+	specific role or purpose of annotation
 
 	1. @Component -> class-level, to mark Spring beans
 	2. @Service
@@ -2178,10 +2179,93 @@ Stereotype Annoatations : Spring will automatically	import the beans into contai
 	ModelMapper
 
 
+Spring MVC : Model View Controller
+	
+	Build web applications
+
+	Model : rep application data
+	View : handling the presentation layer -> html, css, jsp, thymeleaf
+	Controller : handle incoming requests & returns processed(validate) response
+
+Dispatcher Servlet : central component which routes all the requests to available and respective controllers
+	
+	bank : pay, acc, cards
+
+External Server -> should be integrated with the application
+
+Spring Boot : 
+
+Embedded Server -> internally by default it uses tomcat server (you can change the internal server by adding depedency of other server like jetty, netty etc, exclude tomcat server dependency)
+
+Started dependencies to reduce boiler plate code
+
+spring-boot-starters -> dependency management
+
+Manual config in mvc but boot provides auto-configuration
+
+mvc -> web apps, boot -> stand alone apps with min config	
+
+spring boot web(servlet) stack : 
+
+spring web : for building apps with mvc
+
+spring intializr : new spring boot projects 
+
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <version>3.4.0</version>
+</dependency>
 
 
+Creating a simple Rest API : use Spring Initializr or manual config
 
+manual config -> we checked
 
+https://start.spring.io/ -> from here
 
+@SpringBootApplication -> at main level
+
+controller, service, repository -> alias of Component
+
+@RestController -> @Controller + @Response Body
+
+@GetMapping -> for get API
+	    @RequestMapping(value = "/welcome/{name}", method = RequestMethod.GET)
+
+@RequestMapping
+@PathVariable
+
+Additional dependencies :
+
+Spring Boot Dev Tools -> live reload the changes in application
+
+lombok : provides annotations for reducing boiler plate code
+
+	https://projectlombok.org/download
+
+	@Data -> Equivalent to @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode.
+	@NoArgsConstructor	
+    @AllArgsConstructor
+
+To use other server :
+
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+	<exclusions>
+		<!-- Exclude the Tomcat dependency -->
+		<exclusion>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</exclusion>
+	</exclusions>
+</dependency>
+<!-- Use Jetty instead -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>    
 
 
