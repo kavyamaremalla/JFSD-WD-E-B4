@@ -2317,3 +2317,20 @@ Orders.java
     private Persons persons;    
 
 *** Spring Data JPA ***
+
+spring initializr : 
+
+Spring Web 
+Lombok 
+Developer Tools
+MySQL driver.
+Spring Data JPA 
+
+Postman Download : https://www.postman.com/
+
+@Service
+@Repository
+@PostMapping
+@RequestBody
+
+packages -> entity, controller, service (interface and class), repository
