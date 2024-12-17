@@ -2292,7 +2292,7 @@ New Project -> (maven)
 
 hibernate.cfg.xml -> Doctype, tags, connections
 
-Create an entity ->
+Create an entity -> db object
 
 @Entity
 @Table(name = "students")
@@ -2332,5 +2332,23 @@ Postman Download : https://www.postman.com/
 @Repository
 @PostMapping
 @RequestBody
+ResponseEntity -> this can be customized as well
 
 packages -> entity, controller, service (interface and class), repository
+
+All CRUD Operations using spring data JPA
+
+Query parameters : 
+	@RequestParam -> Query Parameters
+
+
+All CRUD Operations using spring data MongoDB
+
+mulesoft, pingfederate, sandbox env, api gateway etc ----> filters...
+	controller -> service -> repo (sensitive because it connects db)
+
+@Document(collection="nameOfCollection") --> Mongo
+
+save -> 
+	If Id is present -> update the details
+	If Id is not present -> create the details in db
