@@ -2356,3 +2356,39 @@ save ->
 Spring MVC : Model View Controller Demo : 	
 
 Download Tomcat : https://tomcat.apache.org/download-90.cgi
+
+Dependencies : spring-web, spring-webmvc, servlet-api, jsp-api, jstl
+
+jsp : Java Server Pages (UI)
+JSTL ->Java Standard tag library
+ViewResolver -> render your model and browser
+Dispatcher Servlet -> Front controller which routes to respective controller
+Model -> bean
+View -> template (UI)
+
+Swagger -> documentation -> test your APIs and you can document
+Spring Exception Handling
+Spring Mapping
+Spring actuator (monitoring your application)
+Customization of Response Entity
+
+
+**Swagger** :
+Swagger -> documentation -> test your APIs and you can document your API's, code generation, 
+Swagger :: Open API -> few APIs are openly available, if we hit them our req will processed. Eg : PayPal, GPay API, Google fonts
+			Documentation -> Definition of what your API does, API URL, Schema definition (DTO/POJO/Entity)
+				1. to sell your APIs
+				2. to share across peers.
+
+			Swagger v2 -> add spring-fox dependency and add SwaggerConfig class
+
+			Swagger v3 -> https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui/2.6.0
+
+		http://localhost:8080/swagger-ui/index.html	
+
+You can customize your Swagger URL.
+
+Spring Mapping/Mapper :	
+
+
+Spring Exception Handling -> how to handle errors in API response		

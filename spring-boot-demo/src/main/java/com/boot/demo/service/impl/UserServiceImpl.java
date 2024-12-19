@@ -1,8 +1,11 @@
 package com.boot.demo.service.impl;
 
+import com.boot.demo.dto.UserDto;
 import com.boot.demo.entity.User;
+import com.boot.demo.mapper.UserMapper;
 import com.boot.demo.repository.UserRepository;
 import com.boot.demo.service.UserService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +17,26 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+//    @Autowired
+//    private UserMapper userMapper;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
     @Override
-    public User createUser(User user) {
-        return userRepository.save(user);
+    public UserDto createUser(UserDto userDto) {
+
+//        User user = userMapper.mapToUser(userDto);// to send this to repo
+//
+//        User savedUser = userRepository.save(user); // to send this to controller
+
+//        return userMapper.mapToUserDto(savedUser);
+
+        User user = modelMapper.map(userDto, User.class);
+
+        return modelMapper.map(userRepository.save(user), UserDto.class);
+
     }
 
     @Override

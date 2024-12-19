@@ -1,11 +1,12 @@
 package com.boot.demo.service;
 
+import com.boot.demo.dto.UserDto;
 import com.boot.demo.entity.User;
 
 import java.util.List;
 
 public interface UserService {
-    User createUser(User user); //create an user into DB (insert query), Post call
+    UserDto createUser(UserDto userDto); //create an user into DB (insert query), Post call
 
     List<User> getAllUsers(); //get all user details (select * from users), Get call
 

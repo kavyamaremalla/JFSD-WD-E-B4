@@ -1,7 +1,12 @@
 package com.boot.demo.controller;
 
+import com.boot.demo.dto.UserDto;
 import com.boot.demo.entity.User;
 import com.boot.demo.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,14 +17,17 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/users")
+@Tag(name = "CRUD API for User Management", description = "Create, Read, Update, Delete on users")
 public class UserController {
 
     private UserService userService;
 
     @PostMapping("/create")
-    public ResponseEntity<User> createUser(@RequestBody User user){
+    @Operation(summary = "Create endpoint", description = "Adds new user to DB")
+    @ApiResponse(responseCode = "201", description = "Successfully created")
+    public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto){
         //insert statement
-        User savedUser = userService.createUser(user);
+        UserDto savedUser = userService.createUser(userDto);
         return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
