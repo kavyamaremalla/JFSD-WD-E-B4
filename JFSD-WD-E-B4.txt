@@ -2369,6 +2369,7 @@ View -> template (UI)
 Swagger -> documentation -> test your APIs and you can document
 Spring Exception Handling
 Spring Mapping
+Spring Validation
 Spring actuator (monitoring your application)
 Customization of Response Entity
 
@@ -2390,5 +2391,27 @@ You can customize your Swagger URL.
 
 Spring Mapping/Mapper :	
 
+controller -> dto is mapped with entity -> service (conversion) -> repository 
+
+UserMapper -> mapped dto to entity and vice-versa
+
+ModelMapper -> implify the process of mapping objects from one type to another
+	https://mvnrepository.com/artifact/org.modelmapper/modelmapper/3.2.0
 
 Spring Exception Handling -> how to handle errors in API response		
+	
+	ResourceNotFoundException
+	EmailAlreadyExistsException
+	GlobalExceptionHandler
+		@ControllerAdvice
+		@ExceptionHandler
+
+Spring Validation : Validating fields
+
+https://medium.com/@tericcabrel/validate-request-body-and-parameter-in-spring-boot-53ca77f97fe9
+
+Spring Actuator -> to monitor the health of your app
+
+	In app.prop -> mention the things which you want to access		
+
+Customizing Response Entity by creating a Response Entity Handler	
