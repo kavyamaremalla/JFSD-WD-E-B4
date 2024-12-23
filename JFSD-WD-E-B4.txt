@@ -2406,7 +2406,7 @@ Spring Exception Handling -> how to handle errors in API response
 		@ControllerAdvice
 		@ExceptionHandler
 
-Spring Validation : Validating fields
+Spring Validation : Validating fields of request body
 
 https://medium.com/@tericcabrel/validate-request-body-and-parameter-in-spring-boot-53ca77f97fe9
 
@@ -2415,3 +2415,49 @@ Spring Actuator -> to monitor the health of your app
 	In app.prop -> mention the things which you want to access		
 
 Customizing Response Entity by creating a Response Entity Handler	
+
+******** Spring ThymeLeaf *********
+
+Thymeleaf : modern server-side Java template to design web apps and stand-alone apps.
+			We can integrate HTML, CSS, JS with back-end logic
+
+Usage : pom.xml/build.gradle in spring boot --> we will just define thymeleaf dependency	
+
+To change default properties and put templates in custom directory : 
+	spring.thymeleaf.prefix=classpath:/templates/
+	spring.thymeleaf.suffix=.html
+	spring.thymeleaf.mode=HTML5
+	spring.thymeleaf.cache=false
+
+	template location
+	.html -> file extension
+	mode -> parsing data
+	cache -> to cache templates or not
+
+Template Structure : HTML pages --> they contain thymeleaf specific attributes	
+templates(HTML, CSS, JS) are store under src/main/resources/templates directory
+
+Syntax :
+
+Basic Expressions :
+
+ 	${...}
+ 	*{...}
+ 	#{...}
+ 	@{...}
+
+Common Attributes : 
+
+	th:text
+	th:href, th:src
+	th:if, th:unless
+	th:each
+
+.m2 -> stores all maven dependencies downloaded from your pom.xml or mvn clean install command's downloads : C:\Users\Your_Profile\.m2\repository
+groupId.artifactId.versions inside this
+
+post API : if you don't have id, it craetes a new entry in DB.
+
+update API : if you have id, it just updates details
+Logging frameworks
+
