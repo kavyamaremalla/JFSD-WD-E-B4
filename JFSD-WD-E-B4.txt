@@ -2435,23 +2435,23 @@ To change default properties and put templates in custom directory :
 	cache -> to cache templates or not
 
 Template Structure : HTML pages --> they contain thymeleaf specific attributes	
-templates(HTML, CSS, JS) are store under src/main/resources/templates directory
+templates(HTML, CSS, JS) are stored under src/main/resources/templates directory
 
 Syntax :
 
 Basic Expressions :
 
- 	${...}
- 	*{...}
- 	#{...}
- 	@{...}
+ 	${...} -> variable expression (access model(dto) attributes)
+ 	*{...} -> forms to select variable expression
+ 	#{...} -> messages from message.properties
+ 	@{...} -> API for URL building
 
 Common Attributes : 
 
-	th:text
-	th:href, th:src
-	th:if, th:unless
-	th:each
+	th:text : replaces element content
+	th:href, th:src : links and resources, sets URL
+	th:if, th:unless : conditinal rendering
+	th:each : iterate over collections
 
 .m2 -> stores all maven dependencies downloaded from your pom.xml or mvn clean install command's downloads : C:\Users\Your_Profile\.m2\repository
 groupId.artifactId.versions inside this

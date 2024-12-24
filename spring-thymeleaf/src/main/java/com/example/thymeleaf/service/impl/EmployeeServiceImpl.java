@@ -6,6 +6,7 @@ import com.example.thymeleaf.repository.EmployeeRepository;
 import com.example.thymeleaf.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,11 +14,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
+    @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Autowired
     private ModelMapper modelMapper;
 
     @Override
