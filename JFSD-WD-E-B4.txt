@@ -2109,12 +2109,6 @@ Spring IOC -> Inversion of Control : responsibility of object creation is on spr
 		
 		Spring takes care of object creation till object destruction
 
-DI -> Dependency Injection -> while creating objects, if there's any dependency	req from other classes ---> it will be injected into your respective beans
-	
-Constructor Injection //best thing to do
-Setter Injection //second priority to use
-Field Injection //least priority to use
-
 Scope of Bean : define the lifecycle &  visibility of bean -> spring container
 
 how many instances(copies) of beans are created and how long they're maintained
@@ -2456,8 +2450,32 @@ Common Attributes :
 .m2 -> stores all maven dependencies downloaded from your pom.xml or mvn clean install command's downloads : C:\Users\Your_Profile\.m2\repository
 groupId.artifactId.versions inside this
 
-post API : if you don't have id, it craetes a new entry in DB.
+post API : if you don't have id, it creates a new entry in DB.
 
 update API : if you have id, it just updates details
-Logging frameworks
 
+Spring Security -> framework, provides custom authentication and authorization to web applications
+
+Basic Auth : 
+
+dependency of spring-security in pom.xml
+
+	-> generating a password
+		-> every restart generates a new password
+		-> it created a sign in and logout pages for get API's while testing in chrome
+		-> in case of postman -> authorization tab, choose Basic Auth and pass username as user and password as : generated password
+		-> If wrong credentials are passed : 401 unauthorized
+		-> http://localhost:8080/logout -> signs out
+
+In app.props : this will override generating pwds, default user name
+
+spring.security.user.name=admin
+spring.security.user.password=admin
+
+Security Config -> authorizes all http requests
+
+InMemoryUserDetailsManager -> UserDetailsService which returns UserDetails interface
+
+DB :
+
+username and password in database and then authenticate APIs
