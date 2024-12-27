@@ -2472,10 +2472,54 @@ In app.props : this will override generating pwds, default user name
 spring.security.user.name=admin
 spring.security.user.password=admin
 
-Security Config -> authorizes all http requests
+Security Config -> authorizes all http requests (post, get, update(put or patch), delete)
 
 InMemoryUserDetailsManager -> UserDetailsService which returns UserDetails interface
+
+PasswordEncoder -> encoded the password
+
+Admin has more previliges than User(john here)
+
+Types of Spring Security : 
+    Authentication : Form based, basic auth, O Auth2.0(to authorize), JWT
+        401 unauthorized : employee vs non-employee
+        	checks username and password
+    Authorization -> Role based, method based etc
+        403 Forbidden -> admin vs user.. specific role access
+
+Roles : 
+    admin : add, delete, view, update
+    user : John -> view, update (Put,Patch)
+
+Authorization:
+    at config level -> manage access
+    at method level : @EnableMethodSecurity., at API level @PreAuthorize/@PostAuthorize
+
+
 
 DB :
 
 username and password in database and then authenticate APIs
+
+
+users : One user can have multiple roles
+roles : One role can be assigned to multiple users
+	
+ We can create a controller	to save user and role
+ 	here, just to save time I put data directly into db.
+
+ Roles -> Spring security expects a naming convention
+ 				use a prefix as ROLE underscore and admin/user/student/manager/director
+
+
+AuthenticationProvider --> implemented by DaoAuthenticationProvider -> setUserDetailsService
+
+hierarchy:
+
+AuthenticationFilter -> AuthenticationManager -> ProviderManager -> AuthenticationProvider -> DaoAuthenticationProvider -> UserDetailsService
+
+we overridden AuthenticationManager, UserDetailsService -> brought data(username/pwd) from db and compared the details with the incoming request's username & password 
+
+username or email -> in postman can be used, give decoded password.
+
+JWT : JSON WEB TOKEN -> String :: it's a hashed token -> to authenticate API's.
