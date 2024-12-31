@@ -2523,3 +2523,39 @@ we overridden AuthenticationManager, UserDetailsService -> brought data(username
 username or email -> in postman can be used, give decoded password.
 
 JWT : JSON WEB TOKEN -> String :: it's a hashed token -> to authenticate API's.
+
+To decode : https://jwt.io/
+
+generated jwt token using username and password
+	jwt details : username i.e., subject, issued at, expiry time, etc
+
+Create our own Authentication Manager and commented the one in config file
+
+created jwtUtil, token filter to check creds from jwt token
+
+
+******* Spring Boot Web Flux *********
+
+Reactive Streams and WebFlux -> asynchronous communication
+
+API Request -> event loop (thread which runs 24 *7) -> non-blocking -> process the incoming requests
+
+-> publisher -> publish events : db/api
+-> subscriber -> ctrls, they will listen to published events
+-> subscription -> to listen what we have subscribed
+
+Netty Server -> default for spring reactive web
+For MongoDb : Spring Data Reactive MongoDB
+For SQL : Spring Data R2DBC 
+
+Flow.java -> for the publisher to subscription, shows steps
+
+    Flux : response could be any number from 0 to N -> any number
+    Mono : single -> either 0 or 1 response
+
+    Tuple -> holds fixed number of elements
+    	2 to 8
+
+ Stream users -> live updates, dynamic content refreshes, rela-time monitoring	
+
+
