@@ -2558,4 +2558,46 @@ Flow.java -> for the publisher to subscription, shows steps
 
  Stream users -> live updates, dynamic content refreshes, rela-time monitoring	
 
+ *********** Spring Batch **********
 
+Bulk processing of data or any bulk operations we use -> batch
+https://spring.io/projects/spring-batch
+
+scheduled jobs -> for every last working day..
+	cron jobs -> in scheduled time you will run this
+
+copy data from one db to other db
+
+an emp came from comp x -> on board this employee to comp y., x comp will export data as an excel/csv file and send to comp y.
+comp y will process csv file and store in their db..
+
+comp x -> csv from their db
+comp y -> process the csv and store in db.
+
+spring initializr -> built a gradle project.
+
+	Environments -> AWS, live-servers
+dev.app.com -> developers to test their changes
+qa.app.com -> for testers to test code
+preprod.app.com -> replica of prod env
+prod.app.com -> live environment where we have real time customers
+
+csv -> comma separated value
+
+Steps in batch processing :::
+
+Reader -> read values from csv
+Processor -> an insert statement will be generated with all the values and columns
+Writer -> we will write the values to database, make sure values are going to db
+
+reader -> processor -> writer
+
+Logging frameworks -> to know application activity
+
+	log4j
+	logback
+	slf4j
+
+	levels :
+
+	debug, error, info, warn, trace, fatal
