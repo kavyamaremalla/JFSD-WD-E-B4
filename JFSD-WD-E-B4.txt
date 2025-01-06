@@ -2601,3 +2601,74 @@ Logging frameworks -> to know application activity
 	levels :
 
 	debug, error, info, warn, trace, fatal
+
+************* JUNIT testing **********	
+Testing :
+
+	sanity -> just happy flow and checking all the API endpoints in application
+
+	end-to-end testing -> happy flow and negative flow
+
+	integration testing -> both front-end and back-end together we test how the application works
+
+	Junit testing : application has functions/methods, each function is considered as unit. When we test unit -> junit testing
+
+		code coverage -> % of tests covered with junit
+
+			sonarqube tool -> bugs, code smells
+			jacoco plugin -> in pom.xml add jacoco plugins
+			IntelliJ coverage tool
+
+		line coverage., condition coverage, method coverage, class coverage
+
+		Condition :
+
+			statement 1 (firstName == null) :
+			statement 2 firstName.isEmpty() :
+
+			1       2
+			true    false
+			false   true
+			true    true
+			false   false
+
+		TDD -> Test Driven Development 
+		BDD	-> Behavior Driven Development
+
+		
+
+Mocking, mock vs stub -> creating dummy data
+
+Actual vs Expected 
+    actual -> your code logic, what's happening with the code
+    expected -> result expectation
+    Assertions -> check if actual and expected matches.. equal, notequal, false, true etc
+
+Test Annotations : 
+
+	@Test
+	@Before
+	@After 
+
+Versions : junit 3, junit 4, junit 5
+
+	https://junit.org/junit5/
+
+Added dependencies of junit 
+created test class -> naming : ClassNameTest
+
+testGetFullName : Tests the normal scenario where we gave firstName and lastNam
+
+testGetFullNameWithEmptyStrings : both inputs are empty
+
+testGetFullNameWithFirstNameEmptyString : firstName empty
+
+testGetFullNameWithLastNameEmptyString : lastName empty
+
+test_GetFullName_WithNullFirstName : firstName as null
+
+testGetFullNameWithNullLastName : lastName as null
+
+testGetFullNameWithBothNull : both first and last names are null
+
+
