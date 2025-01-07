@@ -2635,14 +2635,12 @@ Testing :
 		TDD -> Test Driven Development 
 		BDD	-> Behavior Driven Development
 
-		
-
-Mocking, mock vs stub -> creating dummy data
-
 Actual vs Expected 
     actual -> your code logic, what's happening with the code
     expected -> result expectation
     Assertions -> check if actual and expected matches.. equal, notequal, false, true etc
+
+Mocking, mock vs stub -> creating dummy data
 
 Test Annotations : 
 
@@ -2655,9 +2653,9 @@ Versions : junit 3, junit 4, junit 5
 	https://junit.org/junit5/
 
 Added dependencies of junit 
-created test class -> naming : ClassNameTest
+created test class -> naming convention : ClassNameTest
 
-testGetFullName : Tests the normal scenario where we gave firstName and lastNam
+testGetFullName : Tests the normal scenario where we gave firstName and lastName
 
 testGetFullNameWithEmptyStrings : both inputs are empty
 
@@ -2671,4 +2669,54 @@ testGetFullNameWithNullLastName : lastName as null
 
 testGetFullNameWithBothNull : both first and last names are null
 
+Repos :
+
+JPQL : Java Persistence Query Language
+
+JPQL with index params
+JPQL with named params
+
+Native SQL with index params
+Native SQL with named params
+
+index -> 1, 2
+named -> parameters -> @Param
+
+No tests for classes ->
+
+dto or entity
+MainApplication
+Mappers
+
+Interfaces -> no tests
+	
+	sonar exclusion -> exclude few classes to skip coverage check
+
+Mockito Framework :
+
+	Test Annotations : 
+
+ 	@InjectMocks -> on which class you write test cases
+    @Mock -> on dependent classes
+    @ExtendWith(MockitoExtension.class) // to initialize your mocks or
+        in BeforeEach : MockitoAnnotations.initMocks(this);
+
+    @BeforeEach -> before each and every test case, this will be executed in a class
+    @AfterEach -> after completion of each and every test case, this will be executed in a class
+    @BeforeAll -> one time before executing all the test cases in a class
+    @AfterAll -> one time after executing all the test cases in a class
+    @Ignore -> to ignore a test case temporarily
+
+
+	@DataJpaTest -> repo layer
+	@ExtendWith(MockitoExtension.class)
+	@Mock
+	@InjectMocks
+	@WebMvcTest -> controller layer
+
+	BDDMockito.given or Mockito.when
+	doNothing or willDoNothing
+	anyString, anyClass etc
+
+ 
 
