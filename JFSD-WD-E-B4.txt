@@ -2718,5 +2718,128 @@ Mockito Framework :
 	doNothing or willDoNothing
 	anyString, anyClass etc
 
+READ : SOLID principles, Design Patterns, DSA
+       DB Normalization, DB Locking, ACID Principles, Isolation Levels
+       Git -> Deeper knowledge
+       Spring : Spring AOP, AspectJ
+       Spring MVC : https://www.digitalocean.com/community/tutorials/spring-mvc-example
+       
+        Dispatcher Servlet,View Resolver
+        Creating Simple MVC Application using Spring MVC and JSP
+        Spring MVC Architecture and Working
+        Introduction to JSP and JSTL tags
+        H2-In memory Database -> spring database
+
+       Intro to Spring Boot Web (Servlet) stack 
+
+       Methodologies : Water fall, Agile (Scrum : events)
+
+       React, Angular
+
+      npm : node package module
+      	npm install
+
+Vite on react :
+
+    npm init @vitejs/app or  npx create-vite-app app-name
+    npm init
+      	vite -> npm run dev 
+      		command to run vite react application 
+      		
+Spring Cloud & Microservices: https://spring.io/projects/spring-cloud
+
+ Monolithic -> Single application where you whole code is maintained
+    start-up
+
+microservices -> large scale apps
+    easy to trouble shoot
+    easy to scale, maintain
+    even if one service fails other services work as usual
+    microservice communication : async, sync
+        rest template -> deprecated
+        web client
+        open feign   
+
+api -> ms1 (sql), ms2(mongo) ... ms10(postgres) : different microservices can use diff db
+
+ms -> can run throough app, or using jar
+
+10 -100 ports -> to maintain and track ports in ms -> API Gateway -> forward req to respective ms using routes
+
+configuration of ms -> app.props -> maintained by config server
+
+
+service registry and service discovery -> register ms and track them for discovery
+
+track api call -> distributed tracing : zipkin or micrometer
+                        paid : relic, splunk, data dog
+
+
+ms1 calls ms2 -> ms2 is down : circuit breaker                         
+
+    
+Response body :
+{
+  "employeeDto": {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@gmail.com",
+    "departmentCode": "CS"
+  },
+  "departmentDto": {
+    "id": 1,
+    "departmentName": "CSE",
+    "departmentDescription": "Computer Science engineering",
+    "departmentCode": "CS"
+  }
+}
+
+open feign client :
+    pom.xml -> added dependency
+    created API Client
+    called dept service from emp service imp using api client
+    @EnableFeignClients on app level
+
+service-registry :
+    Eureka server -> netflix
+        created an app, eureka server dependency
+            app : @EnableEurekaServer
+            app.props changes
+            in ms -> registered ms as eureka clients    
+
+api gateway : pom.xml changes, register with eureka server
+              @EnableEurekaClient on app level
+              app.properties changes : routes to microservices
+
+Config Server :               
+
+        pom.xml -> config server
+        app.prop -> register with eureka
+            git details
+                repo name : uri
+                branch
+                clone on true
+        app level : @EnableConfigServer
+In ms :
+
+            <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        So our ms become client to config server        
+
+In all ms : spring.config.import=optional:configserver:http://localhost:8888
+
+In all ms : remove app.props and put it in newly created repo for config server
+
+
+http://localhost:8080/actuator/refresh : If you change any app.prop in any ms, with the port number of that ms , hit actuator end point, we don't have to restart application, app picks latest app.props
+
+Zipkin & CircuitBreaker. -> Read about this
+
+microservice instances (copy of your service either emp service or dept service here..)
+
  
 
